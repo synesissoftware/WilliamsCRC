@@ -52,6 +52,7 @@ sh.exe.stackdump
 *.tmp
 *.VC.db
 *.VC.opendb
+*.vcproj*user
 *.vcxproj*user
 *.zip
 
