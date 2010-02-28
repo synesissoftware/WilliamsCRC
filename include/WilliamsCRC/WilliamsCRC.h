@@ -22,7 +22,7 @@
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MAJOR    1
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MINOR    0
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_REVISION 1
-# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     1
+# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     2
 #endif /* !SYNSOFT_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -54,8 +54,8 @@
 
 #define SYNSOFT_WILLIAMSCRC_VER_MAJOR       1
 #define SYNSOFT_WILLIAMSCRC_VER_MINOR       0
-#define SYNSOFT_WILLIAMSCRC_VER_REVISION    0
-#define SYNSOFT_WILLIAMSCRC_VER             0x01000000
+#define SYNSOFT_WILLIAMSCRC_VER_REVISION    1
+#define SYNSOFT_WILLIAMSCRC_VER             0x01000100
 
 /* /////////////////////////////////////////////////////////////////////////
  * typedefs

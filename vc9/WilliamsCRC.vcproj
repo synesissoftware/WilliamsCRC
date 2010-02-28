@@ -30,6 +30,8 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
+				Description="Ensure directories exist ..."
+				CommandLine="IF NOT EXIST &quot;$(SolutionDir)bin&quot; (&#x0D;&#x0A;&#x0D;&#x0A;	ECHO &quot;creating &apos;bin&apos; dir at $(SolutionDir)bin&quot;&#x0D;&#x0A;	MKDIR &quot;$(SolutionDir)bin&quot;&#x0D;&#x0A;)&#x0D;&#x0A;&#x0D;&#x0A;IF NOT EXIST &quot;$(SolutionDir)lib&quot; (&#x0D;&#x0A;&#x0D;&#x0A;	ECHO &quot;creating &apos;lib&apos; dir at $(SolutionDir)lib&quot;&#x0D;&#x0A;	MKDIR &quot;$(SolutionDir)lib&quot;&#x0D;&#x0A;)&#x0D;&#x0A;"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
@@ -94,7 +96,8 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="if not exist &quot;$(ProjectDir)..\..\..\lib&quot; mkdir &quot;$(ProjectDir)..\..\..\lib&quot;&#x0D;&#x0A;copy /B /V /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)..\..\..\lib&quot;&#x0D;&#x0A;"
+				Description="Creating Synesis-named library in lib directory ..."
+				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.mt.debug.lib&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -109,6 +112,8 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
+				Description="Ensure directories exist ..."
+				CommandLine="IF NOT EXIST &quot;$(SolutionDir)bin&quot; (&#x0D;&#x0A;&#x0D;&#x0A;	ECHO &quot;creating &apos;bin&apos; dir at $(SolutionDir)bin&quot;&#x0D;&#x0A;	MKDIR &quot;$(SolutionDir)bin&quot;&#x0D;&#x0A;)&#x0D;&#x0A;&#x0D;&#x0A;IF NOT EXIST &quot;$(SolutionDir)lib&quot; (&#x0D;&#x0A;&#x0D;&#x0A;	ECHO &quot;creating &apos;lib&apos; dir at $(SolutionDir)lib&quot;&#x0D;&#x0A;	MKDIR &quot;$(SolutionDir)lib&quot;&#x0D;&#x0A;)&#x0D;&#x0A;"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
@@ -174,7 +179,8 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="if not exist &quot;$(ProjectDir)..\..\..\lib&quot; mkdir &quot;$(ProjectDir)..\..\..\lib&quot;&#x0D;&#x0A;copy /B /V /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)..\..\..\lib&quot;&#x0D;&#x0A;"
+				Description="Creating Synesis-named library in lib directory ..."
+				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.x64.mt.debug.lib&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -189,6 +195,8 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
+				Description="Ensure directories exist ..."
+				CommandLine="IF NOT EXIST &quot;$(SolutionDir)bin&quot; (&#x0D;&#x0A;&#x0D;&#x0A;	ECHO &quot;creating &apos;bin&apos; dir at $(SolutionDir)bin&quot;&#x0D;&#x0A;	MKDIR &quot;$(SolutionDir)bin&quot;&#x0D;&#x0A;)&#x0D;&#x0A;&#x0D;&#x0A;IF NOT EXIST &quot;$(SolutionDir)lib&quot; (&#x0D;&#x0A;&#x0D;&#x0A;	ECHO &quot;creating &apos;lib&apos; dir at $(SolutionDir)lib&quot;&#x0D;&#x0A;	MKDIR &quot;$(SolutionDir)lib&quot;&#x0D;&#x0A;)&#x0D;&#x0A;"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
@@ -252,7 +260,8 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="if not exist &quot;$(ProjectDir)..\..\..\lib&quot; mkdir &quot;$(ProjectDir)..\..\..\lib&quot;&#x0D;&#x0A;copy /B /V /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)..\..\..\lib&quot;&#x0D;&#x0A;"
+				Description="Creating Synesis-named library in lib directory ..."
+				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.unix.mt.debug.lib&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -267,6 +276,8 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
+				Description="Ensure directories exist ..."
+				CommandLine="IF NOT EXIST &quot;$(SolutionDir)bin&quot; (&#x0D;&#x0A;&#x0D;&#x0A;	ECHO &quot;creating &apos;bin&apos; dir at $(SolutionDir)bin&quot;&#x0D;&#x0A;	MKDIR &quot;$(SolutionDir)bin&quot;&#x0D;&#x0A;)&#x0D;&#x0A;&#x0D;&#x0A;IF NOT EXIST &quot;$(SolutionDir)lib&quot; (&#x0D;&#x0A;&#x0D;&#x0A;	ECHO &quot;creating &apos;lib&apos; dir at $(SolutionDir)lib&quot;&#x0D;&#x0A;	MKDIR &quot;$(SolutionDir)lib&quot;&#x0D;&#x0A;)&#x0D;&#x0A;"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
@@ -331,7 +342,8 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="if not exist &quot;$(ProjectDir)..\..\..\lib&quot; mkdir &quot;$(ProjectDir)..\..\..\lib&quot;&#x0D;&#x0A;copy /B /V /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)..\..\..\lib&quot;&#x0D;&#x0A;"
+				Description="Creating Synesis-named library in lib directory ..."
+				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.unix.x64.mt.debug.lib&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -346,6 +358,8 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
+				Description="Ensure directories exist ..."
+				CommandLine="IF NOT EXIST &quot;$(SolutionDir)bin&quot; (&#x0D;&#x0A;&#x0D;&#x0A;	ECHO &quot;creating &apos;bin&apos; dir at $(SolutionDir)bin&quot;&#x0D;&#x0A;	MKDIR &quot;$(SolutionDir)bin&quot;&#x0D;&#x0A;)&#x0D;&#x0A;&#x0D;&#x0A;IF NOT EXIST &quot;$(SolutionDir)lib&quot; (&#x0D;&#x0A;&#x0D;&#x0A;	ECHO &quot;creating &apos;lib&apos; dir at $(SolutionDir)lib&quot;&#x0D;&#x0A;	MKDIR &quot;$(SolutionDir)lib&quot;&#x0D;&#x0A;)&#x0D;&#x0A;"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
@@ -410,7 +424,8 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="if not exist &quot;$(ProjectDir)..\..\..\lib&quot; mkdir &quot;$(ProjectDir)..\..\..\lib&quot;&#x0D;&#x0A;copy /B /V /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)..\..\..\lib&quot;&#x0D;&#x0A;"
+				Description="Creating Synesis-named library in lib directory ..."
+				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.mt.lib&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -425,6 +440,8 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
+				Description="Ensure directories exist ..."
+				CommandLine="IF NOT EXIST &quot;$(SolutionDir)bin&quot; (&#x0D;&#x0A;&#x0D;&#x0A;	ECHO &quot;creating &apos;bin&apos; dir at $(SolutionDir)bin&quot;&#x0D;&#x0A;	MKDIR &quot;$(SolutionDir)bin&quot;&#x0D;&#x0A;)&#x0D;&#x0A;&#x0D;&#x0A;IF NOT EXIST &quot;$(SolutionDir)lib&quot; (&#x0D;&#x0A;&#x0D;&#x0A;	ECHO &quot;creating &apos;lib&apos; dir at $(SolutionDir)lib&quot;&#x0D;&#x0A;	MKDIR &quot;$(SolutionDir)lib&quot;&#x0D;&#x0A;)&#x0D;&#x0A;"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
@@ -490,7 +507,8 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="if not exist &quot;$(ProjectDir)..\..\..\lib&quot; mkdir &quot;$(ProjectDir)..\..\..\lib&quot;&#x0D;&#x0A;copy /B /V /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)..\..\..\lib&quot;&#x0D;&#x0A;"
+				Description="Creating Synesis-named library in lib directory ..."
+				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.x64.mt.lib&quot;"
 			/>
 		</Configuration>
 	</Configurations>
