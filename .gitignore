@@ -41,6 +41,8 @@ sh.exe.stackdump
 *.o
 *.obj
 *.opensdf
+*.opt
+*.org
 *.out
 *.pch
 *.pdb
