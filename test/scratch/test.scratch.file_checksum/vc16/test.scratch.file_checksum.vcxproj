@@ -39,10 +39,11 @@
     <ClCompile Include="..\test.scratch.file_checksum.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
+    <PlatformToolset>v142</PlatformToolset>
     <ProjectGuid>{f3f3829e-5606-44e5-b702-bbca95e9980f}</ProjectGuid>
-    <RootNamespace>testscratchfilechecksum</RootNamespace>
+    <RootNamespace>test.scratch.file_checksum</RootNamespace>
+    <VCProjectVersion>16.0</VCProjectVersion>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

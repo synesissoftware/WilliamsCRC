@@ -17,12 +17,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "component", "component", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scratch", "scratch", "{1FB80BDC-D2C0-462A-A36B-3D4D5D0411E1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{17B99003-A5AD-4790-99AA-9069F0FB6EB7}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test.scratch.file_checksum", "test\scratch\test.scratch.file_checksum\vc16\test.scratch.file_checksum.vcxproj", "{F3F3829E-5606-44E5-B702-BBCA95E9980F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E97DEB88-C549-4718-A060-36C39C592AAC} = {E97DEB88-C549-4718-A060-36C39C592AAC}
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{17B99003-A5AD-4790-99AA-9069F0FB6EB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
