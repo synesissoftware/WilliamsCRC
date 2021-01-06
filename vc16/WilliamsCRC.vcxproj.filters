@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9fabe8b9-31cb-46fe-b74e-a9c40fae2cb5}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{50992A8A-AF08-4806-902D-B13EB9B47DD1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\wcrc">
+      <UniqueIdentifier>{1901E519-28FB-4b32-9D18-CEB3162FE48A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementation Files">
+      <UniqueIdentifier>{D235CB96-B7A2-46AC-B7DC-310587E1D366}</UniqueIdentifier>
+      <Extensions>c;cc;cpp;cxx;</Extensions>
+    </Filter>
+    <Filter Include="Implementation Files\src">
+      <UniqueIdentifier>{5C1278A0-2826-4E94-A9DF-B7121DAC2348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementation Files\wsrc">
+      <UniqueIdentifier>{2B1DA37A-C87C-4a46-BE2E-AEB83879C195}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module Files">
+      <UniqueIdentifier>{115E6387-3699-414F-89E3-A8DCD7CD1CD3}</UniqueIdentifier>
+      <Extensions>def;hpj;idl;odl;rc;xsd;</Extensions>
+    </Filter>
+    <Filter Include="Module Files\_dev_pragmatics_">
+      <UniqueIdentifier>{F31D58C5-9614-4CD6-A019-C75F99CF755F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\WilliamsCRC.cpp">
+      <Filter>Implementation Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wcrc\crcmodel.cpp">
+      <Filter>Implementation Files\wsrc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\WilliamsCRC\WilliamsCRC.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wcrc\crcmodel.h">
+      <Filter>Header Files\wcrc</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
