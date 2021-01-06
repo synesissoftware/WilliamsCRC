@@ -59,6 +59,7 @@ sh.exe.stackdump
 *.out
 *.pch
 *.pdb
+*.scc
 *.sdf
 *.slo
 *.so
