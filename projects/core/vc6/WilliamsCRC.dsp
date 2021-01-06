@@ -43,16 +43,16 @@ RSC=rc.exe
 # PROP Output_Dir "Release"
 # PROP Intermediate_Dir "Release"
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /W3 /GX /O2 /I "../wcrc" /I "../include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /c
-# ADD CPP /nologo /W3 /GX /O2 /I "../wcrc" /I "../include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /c
+# ADD BASE CPP /nologo /W3 /GX /O2 /I "../../../src/wcrc" /I "../../../include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /c
+# ADD CPP /nologo /W3 /GX /O2 /I "../../../src/wcrc" /I "../../../include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /c
 # ADD BASE RSC /l 0xc09 /d "NDEBUG"
 # ADD RSC /l 0xc09 /d "NDEBUG"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
 LIB32=link.exe -lib
-# ADD BASE LIB32 /nologo /out:"..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.lib"
-# ADD LIB32 /nologo /out:"..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.lib"
+# ADD BASE LIB32 /nologo /out:"..\..\..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.lib"
+# ADD LIB32 /nologo /out:"..\..\..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.lib"
 
 !ELSEIF  "$(CFG)" == "WilliamsCRC - Win32 Debug"
 
@@ -66,16 +66,16 @@ LIB32=link.exe -lib
 # PROP Output_Dir "Debug"
 # PROP Intermediate_Dir "Debug"
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /I "../wcrc" /I "../include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /c
-# ADD CPP /nologo /W3 /Gm /GX /Zi /Od /I "../wcrc" /I "../include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /c
+# ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /I "../../../src/wcrc" /I "../../../include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /c
+# ADD CPP /nologo /W3 /Gm /GX /Zi /Od /I "../../../src/wcrc" /I "../../../include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /c
 # ADD BASE RSC /l 0xc09 /d "_DEBUG"
 # ADD RSC /l 0xc09 /d "_DEBUG"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
 LIB32=link.exe -lib
-# ADD BASE LIB32 /nologo /out:"..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.debug.lib"
-# ADD LIB32 /nologo /out:"..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.debug.lib"
+# ADD BASE LIB32 /nologo /out:"..\..\..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.debug.lib"
+# ADD LIB32 /nologo /out:"..\..\..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.debug.lib"
 
 !ELSEIF  "$(CFG)" == "WilliamsCRC - Win32 Debug pseudoUNIX"
 
@@ -89,16 +89,16 @@ LIB32=link.exe -lib
 # PROP Output_Dir "DebugUnix"
 # PROP Intermediate_Dir "DebugUnix"
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /I "../wcrc" /I "../include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "UNIX" /D "_DEBUG" /D "_MBCS" /D "_LIB" /D "_STLSOFT_FORCE_ANY_COMPILER" /YX /FD /GZ /c
-# ADD CPP /nologo /W3 /Gm /GX /Zi /Od /I "../wcrc" /I "../include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "UNIX" /D "_DEBUG" /D "_MBCS" /D "_LIB" /D "_STLSOFT_FORCE_ANY_COMPILER" /YX /FD /GZ /c
+# ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /I "../../../src/wcrc" /I "../../../include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "UNIX" /D "_DEBUG" /D "_MBCS" /D "_LIB" /D "_STLSOFT_FORCE_ANY_COMPILER" /YX /FD /GZ /c
+# ADD CPP /nologo /W3 /Gm /GX /Zi /Od /I "../../../src/wcrc" /I "../../../include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "UNIX" /D "_DEBUG" /D "_MBCS" /D "_LIB" /D "_STLSOFT_FORCE_ANY_COMPILER" /YX /FD /GZ /c
 # ADD BASE RSC /l 0xc09 /d "_DEBUG"
 # ADD RSC /l 0xc09 /d "_DEBUG"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
 LIB32=link.exe -lib
-# ADD BASE LIB32 /nologo /out:"..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.unix.debug.lib"
-# ADD LIB32 /nologo /out:"..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.unix.debug.lib"
+# ADD BASE LIB32 /nologo /out:"..\..\..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.unix.debug.lib"
+# ADD LIB32 /nologo /out:"..\..\..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.unix.debug.lib"
 
 !ELSEIF  "$(CFG)" == "WilliamsCRC - Win32 Debug Multithreaded"
 
@@ -112,16 +112,16 @@ LIB32=link.exe -lib
 # PROP Output_Dir "DebugMt"
 # PROP Intermediate_Dir "DebugMt"
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /MTd /W3 /Gm /GX /ZI /Od /I "../wcrc" /I "../include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /c
-# ADD CPP /nologo /MTd /W3 /Gm /GX /Zi /Od /I "../wcrc" /I "../include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /c
+# ADD BASE CPP /nologo /MTd /W3 /Gm /GX /ZI /Od /I "../../../src/wcrc" /I "../../../include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /c
+# ADD CPP /nologo /MTd /W3 /Gm /GX /Zi /Od /I "../../../src/wcrc" /I "../../../include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /c
 # ADD BASE RSC /l 0xc09 /d "_DEBUG"
 # ADD RSC /l 0xc09 /d "_DEBUG"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
 LIB32=link.exe -lib
-# ADD BASE LIB32 /nologo /out:"..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.mt.debug.lib"
-# ADD LIB32 /nologo /out:"..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.mt.debug.lib"
+# ADD BASE LIB32 /nologo /out:"..\..\..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.mt.debug.lib"
+# ADD LIB32 /nologo /out:"..\..\..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.mt.debug.lib"
 
 !ELSEIF  "$(CFG)" == "WilliamsCRC - Win32 Release Multithreaded"
 
@@ -135,16 +135,16 @@ LIB32=link.exe -lib
 # PROP Output_Dir "ReleaseMt"
 # PROP Intermediate_Dir "ReleaseMt"
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /MT /W3 /GX /O2 /I "../wcrc" /I "../include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /c
-# ADD CPP /nologo /MT /W3 /GX /O2 /I "../wcrc" /I "../include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /c
+# ADD BASE CPP /nologo /MT /W3 /GX /O2 /I "../../../src/wcrc" /I "../../../include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /c
+# ADD CPP /nologo /MT /W3 /GX /O2 /I "../../../src/wcrc" /I "../../../include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /c
 # ADD BASE RSC /l 0xc09 /d "NDEBUG"
 # ADD RSC /l 0xc09 /d "NDEBUG"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
 LIB32=link.exe -lib
-# ADD BASE LIB32 /nologo /out:"..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.mt.lib"
-# ADD LIB32 /nologo /out:"..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.mt.lib"
+# ADD BASE LIB32 /nologo /out:"..\..\..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.mt.lib"
+# ADD LIB32 /nologo /out:"..\..\..\lib\SynesisSoftware.WilliamsCRC.1.core.vc6.mt.lib"
 
 !ENDIF
 
@@ -160,7 +160,7 @@ LIB32=link.exe -lib
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
-SOURCE=..\src\WilliamsCRC.cpp
+SOURCE=..\..\..\\src\WilliamsCRC.cpp
 # End Source File
 # End Group
 # Begin Group "Header Files"
@@ -204,7 +204,7 @@ SOURCE="$(STLSOFT_1_10)\include\stlsoft\stlsoft.h"
 # End Group
 # Begin Source File
 
-SOURCE="..\wcrc\crcmodel.cpp"
+SOURCE="..\..\..\src\wcrc\crcmodel.cpp"
 
 !IF  "$(CFG)" == "WilliamsCRC - Win32 Release"
 
@@ -234,7 +234,7 @@ SOURCE="..\wcrc\crcmodel.cpp"
 # End Source File
 # Begin Source File
 
-SOURCE="..\wcrc\crcmodel.h"
+SOURCE="..\..\..\src\wcrc\crcmodel.h"
 # End Source File
 # Begin Source File
 
