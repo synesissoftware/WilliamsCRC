@@ -8,6 +8,9 @@
     <Filter Include="Header Files\include">
       <UniqueIdentifier>{50992A8A-AF08-4806-902D-B13EB9B47DD1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\include\WilliamsCRC">
+      <UniqueIdentifier>{e184aeaf-50c6-47ce-b433-2c17afd4a164}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Header Files\wcrc">
       <UniqueIdentifier>{1901E519-28FB-4b32-9D18-CEB3162FE48A}</UniqueIdentifier>
     </Filter>
@@ -38,11 +41,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\WilliamsCRC\WilliamsCRC.h">
-      <Filter>Header Files\include</Filter>
-    </ClInclude>
     <ClInclude Include="..\wcrc\crcmodel.h">
       <Filter>Header Files\wcrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\WilliamsCRC\WilliamsCRC.h">
+      <Filter>Header Files\include\WilliamsCRC</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

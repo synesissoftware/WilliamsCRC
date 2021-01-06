@@ -8,6 +8,9 @@
     <Filter Include="Header Files\include">
       <UniqueIdentifier>{50992A8A-AF08-4806-902D-B13EB9B47DD1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\include\WilliamsCRC">
+      <UniqueIdentifier>{e184aeaf-50c6-47ce-b433-2c17afd4a164}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Implementation Files">
       <UniqueIdentifier>{D235CB96-B7A2-46AC-B7DC-310587E1D366}</UniqueIdentifier>
       <Extensions>c;cc;cpp;cxx;</Extensions>
@@ -34,5 +37,13 @@
     <ClCompile Include="..\implicit_link.cpp">
       <Filter>Module Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\WilliamsCRC\implicit_link.h">
+      <Filter>Header Files\include\WilliamsCRC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\WilliamsCRC\WilliamsCRC.h">
+      <Filter>Header Files\include\WilliamsCRC</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

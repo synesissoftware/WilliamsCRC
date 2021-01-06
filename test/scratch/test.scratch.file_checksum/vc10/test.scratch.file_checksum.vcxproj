@@ -38,6 +38,10 @@
     <ClCompile Include="..\implicit_link.cpp" />
     <ClCompile Include="..\test.scratch.file_checksum.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\WilliamsCRC\implicit_link.h" />
+    <ClInclude Include="..\..\..\..\include\WilliamsCRC\WilliamsCRC.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{f3f3829e-5606-44e5-b702-bbca95e9980f}</ProjectGuid>
