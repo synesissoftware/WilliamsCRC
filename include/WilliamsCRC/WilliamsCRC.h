@@ -44,9 +44,9 @@
 
 #ifndef SYNSOFT_DOCUMENTATION_SKIP_SECTION
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MAJOR    1
-# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MINOR    0
-# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_REVISION 2
-# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     7
+# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MINOR    1
+# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_REVISION 1
+# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     8
 #endif /* !SYNSOFT_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -77,9 +77,9 @@
  */
 
 #define SYNSOFT_WILLIAMSCRC_VER_MAJOR       1
-#define SYNSOFT_WILLIAMSCRC_VER_MINOR       0
-#define SYNSOFT_WILLIAMSCRC_VER_REVISION    5
-#define SYNSOFT_WILLIAMSCRC_VER             0x01000500
+#define SYNSOFT_WILLIAMSCRC_VER_MINOR       1
+#define SYNSOFT_WILLIAMSCRC_VER_REVISION    1
+#define SYNSOFT_WILLIAMSCRC_VER             0x01010100
 
 /* /////////////////////////////////////////////////////////////////////////
  * typedefs
@@ -147,11 +147,47 @@ WilliamsCRC_CalculateFileCrc(
 ,   crc_result_t*   result
 );
 
+/** Calculates the CRC of the contents, up to a maximum number of bytes, of a file identified by its path
+ *
+ * @param path The path of the file. May not be \c null
+ * @param cbMaxToRead The maximum number of bytes to read. If 0, all bytes are read
+ * @param result Pointer to variable to receive the result. May not be \c null
+ * @param pcbRead Pointer to variable to receive the number of bytes read. May be \c null
+ *
+ * @pre nullptr != path
+ * @pre nullptr != results
+ */
+int
+WilliamsCRC_CalculateFileCrcMax(
+    /* [in] */  char const*     path
+,   /* [in] */  size_t          cbMaxToRead
+,   /* [out] */ crc_result_t*   result
+,   /* [out] */ size_t*         pcbRead
+);
+
 /** Calculates the CRC of a file identified by the given file handle */
 int
 WilliamsCRC_CalculateFileHandleCrc(
     FILE*           h
 ,   crc_result_t*   result
+);
+
+/** Calculates the CRC of the contents, up to a maximum number of bytes, of a file identified by its file-handle
+ *
+ * @param path The path of the file. May not be \c null
+ * @param cbMaxToRead The maximum number of bytes to read. If 0, all bytes are read
+ * @param result Pointer to variable to receive the result. May not be \c null
+ * @param pcbRead Pointer to variable to receive the number of bytes read. May be \c null
+ *
+ * @pre nullptr != path
+ * @pre nullptr != results
+ */
+int
+WilliamsCRC_CalculateFileHandleCrcMax(
+    /* [in] */  FILE*           h
+,   /* [in] */  size_t          cbMaxToRead
+,   /* [out] */ crc_result_t*   result
+,   /* [out] */ size_t*         pcbRead
 );
 
 #ifdef __cplusplus

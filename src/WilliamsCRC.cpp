@@ -102,14 +102,18 @@ WilliamsCRC_CalculateBlockCrc_(
 
 int
 WilliamsCRC_CalculateFileCrc_(
-    char const*     path
-,   crc_result_t*   result
+    /* [in] */  char const*     path
+,   /* [in] */  size_t          cbMaxToRead
+,   /* [out] */ crc_result_t*   result
+,   /* [out] */ size_t*         pcbRead
 );
 
 int
 WilliamsCRC_CalculateFileHandleCrc_(
-    FILE*           h
-,   crc_result_t*   result
+    /* [in] */  FILE*           h
+,   /* [in] */  size_t          cbMaxToRead
+,   /* [out] */ crc_result_t*   result
+,   /* [out] */ size_t*         pcbRead
 );
 
 } /* anonymous namespace */
@@ -225,8 +229,10 @@ WilliamsCRC_CalculateBlockCrc_(
 
 int
 WilliamsCRC_CalculateFileCrc_(
-    char const*     path
-,   crc_result_t*   result
+    /* [in] */  char const*     path
+,   /* [in] */  size_t          cbMaxToRead
+,   /* [out] */ crc_result_t*   result
+,   /* [out] */ size_t*         pcbRead
 )
 {
     FILE* f;
@@ -240,32 +246,65 @@ WilliamsCRC_CalculateFileCrc_(
     {
         stlsoft::scoped_handle<FILE*> scoper2(f, ::fclose);
 
-        return WilliamsCRC_CalculateFileHandleCrc_(f, result);
+        return WilliamsCRC_CalculateFileHandleCrc_(f, cbMaxToRead, result, pcbRead);
     }
 }
 
 int
 WilliamsCRC_CalculateFileHandleCrc_(
-    FILE*           f
-,   crc_result_t*   result
+    /* [in] */  FILE*           f
+,   /* [in] */  size_t          cbMaxToRead
+,   /* [out] */ crc_result_t*   result
+,   /* [out] */ size_t*         pcbRead
 )
 {
     cm_t    cm;
     int     r   =   WilliamsCRC_cm_init_(&cm);
+
+    assert(NULL != pcbRead);
+
+    *pcbRead = 0;
 
     if(0 == r)
     {
         stlsoft::scoped_handle<cm_t*>   scoper(&cm, WilliamsCRC_cm_destroy_);
 
         unsigned char                   bytes[2048];
+        size_t                          numToRead   =   (0 == cbMaxToRead) ? sizeof(bytes) : (cbMaxToRead < sizeof(bytes)) ? cbMaxToRead : sizeof(bytes);
 
-        { for(size_t n; 0 != (n = ::fread(&bytes[0], 1, sizeof(bytes), f)); )
+        assert(numToRead <= sizeof(bytes));
+
+        { for(size_t n; 0 != numToRead && 0 != (n = ::fread(&bytes[0], 1, numToRead, f)); )
         {
+            *pcbRead += n;
+
             r = WilliamsCRC_Add_(cm, bytes, n);
 
             if(0 != r)
             {
                 break;
+            }
+            else
+            {
+                if (0 != cbMaxToRead)
+                {
+                    size_t remaining;
+
+                    assert(*pcbRead <= cbMaxToRead);
+
+                    remaining = cbMaxToRead - *pcbRead;
+
+                    if (remaining > sizeof(bytes))
+                    {
+                        numToRead = sizeof(bytes);
+                    }
+                    else
+                    {
+                        numToRead = remaining;
+                    }
+
+                    assert(numToRead <= sizeof(bytes));
+                }
             }
         }}
 
@@ -360,7 +399,27 @@ WilliamsCRC_CalculateFileCrc(
 ,   crc_result_t* result
 )
 {
-    return WilliamsCRC_CalculateFileCrc_(path, result);
+    size_t  dummy;
+
+    return WilliamsCRC_CalculateFileCrc_(path, 0, result, &dummy);
+}
+
+int
+WilliamsCRC_CalculateFileCrcMax(
+    /* [in] */  char const*     path
+,   /* [in] */  size_t          cbMaxToRead
+,   /* [out] */ crc_result_t*   result
+,   /* [out] */ size_t*         pcbRead
+)
+{
+    size_t  dummy;
+
+    if (NULL == pcbRead)
+    {
+        pcbRead = &dummy;
+    }
+
+    return WilliamsCRC_CalculateFileCrc_(path, cbMaxToRead, result, pcbRead);
 }
 
 int
@@ -369,7 +428,25 @@ WilliamsCRC_CalculateFileHandleCrc(
 ,   crc_result_t* result
 )
 {
-    return WilliamsCRC_CalculateFileHandleCrc_(f, result);
+    return WilliamsCRC_CalculateFileHandleCrc_(f, 0, result, NULL);
+}
+
+int
+WilliamsCRC_CalculateFileCrcMax(
+    /* [in] */  FILE*           f
+,   /* [in] */  size_t          cbMaxToRead
+,   /* [out] */ crc_result_t*   result
+,   /* [out] */ size_t*         pcbRead
+)
+{
+    size_t  dummy;
+
+    if (NULL == pcbRead)
+    {
+        pcbRead = &dummy;
+    }
+
+    return WilliamsCRC_CalculateFileHandleCrc_(f, cbMaxToRead, result, pcbRead);
 }
 
 /* /////////////////////////////////////////////////////////////////////////
