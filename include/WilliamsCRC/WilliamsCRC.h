@@ -46,7 +46,7 @@
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MAJOR    1
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MINOR    0
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_REVISION 2
-# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     6
+# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     7
 #endif /* !SYNSOFT_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -125,9 +125,7 @@ WilliamsCRC_Add(
 ,   size_t          cb
 );
 
-/** Retrieves the (
-    urrent
- CRC result from a CRC processing context */
+/** Retrieves the current CRC result from a CRC processing context */
 int
 WilliamsCRC_GetCRC(
     WilliamsCRC_t   wcrc
