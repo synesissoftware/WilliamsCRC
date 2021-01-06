@@ -12,6 +12,13 @@ ReleaseMt/
 ReleaseDll/
 ReleaseUnix/
 
+Debug Multithreaded/
+Debug Multithreaded Dll/
+Debug Multithreaded pseudoUNIX/
+Release Multithreaded/
+Release Multithreaded Dll/
+Release Multithreaded pseudoUNIX/
+
 ipch/
 
 Win32/
