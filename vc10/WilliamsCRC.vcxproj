@@ -47,7 +47,7 @@
   <PropertyGroup>
     <SynSoft_LibVersion>1</SynSoft_LibVersion>
     <SynSoft_LibBasename>SynesisSoftware.WilliamsCRC.$(SynSoft_LibVersion).core</SynSoft_LibBasename>
-    <SynSoft_CompilerTag>vc16</SynSoft_CompilerTag>
+    <SynSoft_CompilerTag>vc10</SynSoft_CompilerTag>
   </PropertyGroup>
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
     <SynSoft_LibTargetStem>$(SynSoft_LibBasename).$(SynSoft_CompilerTag).mt.debug</SynSoft_LibTargetStem>
