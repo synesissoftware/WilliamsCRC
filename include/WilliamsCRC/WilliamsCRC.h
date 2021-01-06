@@ -4,13 +4,37 @@
  * Purpose:     WilliamsCRC API
  *
  * Created:     1st March 2010
- * Updated:     1st March 2010
+ * Updated:     6th January 2021
  *
- * Author:      Matthew Wilson
+ * Copyright (c) 2019-2021, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
+ * All rights reserved.
  *
- * Copyright:   Synesis Software Pty Ltd, (c) 2010. All rights reserved.
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are
+ * met:
  *
- * Home:        www.synesis.com.au/software
+ * - Redistributions of source code must retain the above copyright notice,
+ *   this list of conditions and the following disclaimer.
+ * - Redistributions in binary form must reproduce the above copyright
+ *   notice, this list of conditions and the following disclaimer in the
+ *   documentation and/or other materials provided with the distribution.
+ * - Neither the name(s) of Matthew Wilson and Synesis Information Systems
+ *   nor the names of any contributors may be used to endorse or promote
+ *   products derived from this software without specific prior written
+ *   permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+ * IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -21,8 +45,8 @@
 #ifndef SYNSOFT_DOCUMENTATION_SKIP_SECTION
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MAJOR    1
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MINOR    0
-# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_REVISION 1
-# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     2
+# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_REVISION 2
+# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     3
 #endif /* !SYNSOFT_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -37,38 +61,42 @@
  */
 
 /** \def SYNSOFT_WILLIAMSCRC_VER_MAJOR
- * The major version number of Synesis Software WilliamsCRC
+ * The major version number of Synesis Information Systems' WilliamsCRC
  */
 
 /** \def SYNSOFT_WILLIAMSCRC_VER_MINOR
- * The minor version number of Synesis Software WilliamsCRC
+ * The minor version number of Synesis Information Systems' WilliamsCRC
  */
 
 /** \def SYNSOFT_WILLIAMSCRC_VER_REVISION
- * The revision version number of Synesis Software WilliamsCRC
+ * The revision version number of Synesis Information Systems' WilliamsCRC
  */
 
 /** \def SYNSOFT_WILLIAMSCRC_VER
- * The current composite version number of Synesis Software WilliamsCRC
+ * The current composite version number of Synesis Information Systems' WilliamsCRC
  */
 
 #define SYNSOFT_WILLIAMSCRC_VER_MAJOR       1
 #define SYNSOFT_WILLIAMSCRC_VER_MINOR       0
-#define SYNSOFT_WILLIAMSCRC_VER_REVISION    1
-#define SYNSOFT_WILLIAMSCRC_VER             0x01000100
+#define SYNSOFT_WILLIAMSCRC_VER_REVISION    2
+#define SYNSOFT_WILLIAMSCRC_VER             0x01000200
 
 /* /////////////////////////////////////////////////////////////////////////
  * typedefs
  */
 
-typedef unsigned int                crc_result_t;
+typedef unsigned int                                        crc_result_t;
 
-struct                              WilliamsCRC_info_t;
-typedef struct WilliamsCRC_info_t*  WilliamsCRC_t;
+struct                                                      WilliamsCRC_info_t;
+typedef struct WilliamsCRC_info_t*                          WilliamsCRC_t;
 
 /* /////////////////////////////////////////////////////////////////////////
  * API
  */
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /** Initialises the library */
 int
@@ -128,8 +156,19 @@ WilliamsCRC_CalculateFileHandleCrc(
 ,   crc_result_t*   result
 );
 
-/* ////////////////////////////////////////////////////////////////////// */
+#ifdef __cplusplus
+} /* extern "C" */
+#endif
+
+/* /////////////////////////////////////////////////////////////////////////
+ * inclusion control
+ */
+
+#ifdef STLSOFT_CF_PRAGMA_ONCE_SUPPORT
+# pragma once
+#endif /* STLSOFT_CF_PRAGMA_ONCE_SUPPORT */
 
 #endif /* SYNSOFT_INCL_WILLIAMSCRC_H_WILLIAMSCRC */
 
 /* ///////////////////////////// end of file //////////////////////////// */
+

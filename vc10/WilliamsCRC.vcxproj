@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Multithreaded|Win32">
+      <Configuration>Debug Multithreaded</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Multithreaded|x64">
+      <Configuration>Debug Multithreaded</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Multithreaded pseudoUNIX|Win32">
+      <Configuration>Debug Multithreaded pseudoUNIX</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Multithreaded pseudoUNIX|x64">
+      <Configuration>Debug Multithreaded pseudoUNIX</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Multithreaded|Win32">
+      <Configuration>Release Multithreaded</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Multithreaded|x64">
+      <Configuration>Release Multithreaded</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Multithreaded pseudoUNIX|Win32">
+      <Configuration>Release Multithreaded pseudoUNIX</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Multithreaded pseudoUNIX|x64">
+      <Configuration>Release Multithreaded pseudoUNIX</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E97DEB88-C549-4718-A060-36C39C592AAC}</ProjectGuid>
+    <RootNamespace>WilliamsCRC</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SynSoft_LibBasename>SynesisSoftware.WilliamsCRC.1.core</SynSoft_LibBasename>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.mt.debug</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|x64'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.x64.mt.debug</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.dll.debug</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|x64'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.x64.dll.debug</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded pseudoUnix|Win32'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.unix.mt.debug</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded pseudoUnix|x64'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.unix.x64.mt.debug</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.x64</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|x64'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.x64.mt</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.dll</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|x64'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.x64.dll</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded pseudoUnix|Win32'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.unix.mt</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded pseudoUnix|x64'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.unix.x64.mt</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Unicode Debug Multithreaded|Win32'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.widestring.mt</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Unicode Debug Multithreaded|x64'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.x64.widestring.mt</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Unicode Release Multithreaded|Win32'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.widestring.dll</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Unicode Release Multithreaded|x64'">
+    <SynSoft_LibTargetStem>$(SynSoft_LibBasename).vc10.x64.widestring.dll</SynSoft_LibTargetStem>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SynSoft_LibTargetDir>$(ProjectDir)..\lib\</SynSoft_LibTargetDir>
+    <SynSoft_LibTargetPath>$(SynSoft_LibTargetDir)$(SynSoft_LibTargetStem).lib</SynSoft_LibTargetPath>
+    <ExtensionsToDeleteOnClean>$(SynSoft_LibTargetPath);$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup>
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(STLSOFT)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)../wcrc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <PostBuildEvent>
+      <Command>IF NOT EXIST "$(SynSoft_LibTargetDir)" (
+  ECHO "$(SynSoft_LibTargetDir)" does not exist
+) ELSE (
+  COPY /Y "$(TargetPath)" "$(SynSoft_LibTargetPath)"
+)</Command>
+      <Message>Creating Synesis-named library in lib directory ...</Message>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>IF NOT EXIST "$(SolutionDir)bin" (
+
+	ECHO "creating 'bin' dir at $(SolutionDir)bin"
+	MKDIR "$(SolutionDir)bin"
+)
+
+IF NOT EXIST "$(SolutionDir)lib" (
+
+	ECHO "creating 'lib' dir at $(SolutionDir)lib"
+	MKDIR "$(SolutionDir)lib"
+)
+</Command>
+      <Message>Ensure directories exist ...</Message>
+    </PreBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c09</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
+    <ClCompile>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <MinimalRebuild>true</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+    <ClCompile>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Platform)'=='Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Platform)'=='x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition=" $(Configuration.ToUpper().Contains('UNIX'))">
+    <ClCompile>
+      <PreprocessorDefinitions>_STLSOFT_FORCE_ANY_COMPILER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>UNIX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|x64'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded pseudoUNIX|Win32'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded pseudoUNIX|x64'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|x64'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded pseudoUNIX|Win32'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded pseudoUNIX|x64'">
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\WilliamsCRC.cpp">
+    </ClCompile>
+    <ClCompile Include="..\wcrc\crcmodel.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\wcrc\crcmodel.h" />
+    <ClInclude Include="..\include\WilliamsCRC\WilliamsCRC.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
