@@ -29,6 +29,10 @@ x64/
 # files (by name)
 
 .DS_Store
+
+makefile.tmpl
+makefile.tools.xml
+
 sh.exe.stackdump
 
 # files (by pattern)
