@@ -53,8 +53,8 @@
 #ifndef WILLIAMSCRC_DOCUMENTATION_SKIP_SECTION
 # define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_MAJOR      1
 # define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_MINOR      0
-# define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_REVISION   1
-# define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_EDIT       1
+# define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_REVISION   2
+# define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_EDIT       2
 #endif /* !WILLIAMSCRC_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -71,6 +71,28 @@
 
 #define WILLIAMSCRC_STRINGIZE_(x)                           #x
 #define WILLIAMSCRC_STRINGIZE(x)                            WILLIAMSCRC_STRINGIZE_(x)
+
+/* /////////////////////////////////////////////////////////////////////////
+ * architecture discrimination
+ */
+
+#if defined(__amd64__) || \
+    defined(__amd64) || \
+    defined(_AMD64_) || \
+    defined(_M_AMD64) || \
+    defined(_M_X64)
+# define WILLIAMSCRC_ARCH_IS_X64
+#elif defined(__ia64__) || \
+      defined(__ia64) || \
+      defined(_IA64_) || \
+      defined(_M_IA64)
+# define WILLIAMSCRC_ARCH_IS_IA64
+#elif defined(__i386__) || \
+      defined(__i386) || \
+      defined(_X86_) || \
+      defined(_M_IX86)
+# define WILLIAMSCRC_ARCH_IS_X86
+#endif /* _M_?? */
 
 /* /////////////////////////////////////////////////////////////////////////
  * implicit linking
