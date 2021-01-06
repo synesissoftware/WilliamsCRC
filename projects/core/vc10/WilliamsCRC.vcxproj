@@ -98,7 +98,7 @@
     <SynSoft_LibTargetStem>$(SynSoft_LibBasename).$(SynSoft_CompilerTag).x64.widestring.dll</SynSoft_LibTargetStem>
   </PropertyGroup>
   <PropertyGroup>
-    <SynSoft_LibTargetDir>$(ProjectDir)..\lib\</SynSoft_LibTargetDir>
+    <SynSoft_LibTargetDir>$(ProjectDir)..\..\..\lib\</SynSoft_LibTargetDir>
     <SynSoft_LibTargetPath>$(SynSoft_LibTargetDir)$(SynSoft_LibTargetStem).lib</SynSoft_LibTargetPath>
     <ExtensionsToDeleteOnClean>$(SynSoft_LibTargetPath);$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
   </PropertyGroup>
@@ -112,8 +112,8 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>$(STLSOFT)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories>$(ProjectDir)../wcrc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories>$(ProjectDir)../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)../../../src/wcrc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)../../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <WarningLevel>Level4</WarningLevel>
       <TreatWarningAsError>true</TreatWarningAsError>
@@ -204,15 +204,15 @@ IF NOT EXIST "$(SolutionDir)lib" (
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded pseudoUNIX|x64'">
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\WilliamsCRC.cpp">
+    <ClCompile Include="..\..\..\src\WilliamsCRC.cpp">
     </ClCompile>
-    <ClCompile Include="..\wcrc\crcmodel.cpp">
+    <ClCompile Include="..\..\..\src\wcrc\crcmodel.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\wcrc\crcmodel.h" />
-    <ClInclude Include="..\include\WilliamsCRC\WilliamsCRC.h" />
+    <ClInclude Include="..\..\..\src\wcrc\crcmodel.h" />
+    <ClInclude Include="..\..\..\include\WilliamsCRC\WilliamsCRC.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

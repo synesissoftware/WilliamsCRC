@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{F0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{03C49B5E-F29C-4F7E-B871-72BD6D7D4C3B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WilliamsCRC", "vc16\WilliamsCRC.vcxproj", "{E97DEB88-C549-4718-A060-36C39C592AAC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WilliamsCRC", "projects\core\vc16\WilliamsCRC.vcxproj", "{E97DEB88-C549-4718-A060-36C39C592AAC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AD08C587-5F73-4144-ACE9-7282169536E9}"
 EndProject

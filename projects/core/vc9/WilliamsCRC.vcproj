@@ -48,7 +48,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../wcrc,../include,$(STLSOFT)/include"
+				AdditionalIncludeDirectories="../../../src/wcrc,../../../include,$(STLSOFT)/include"
 				PreprocessorDefinitions="WIN32;_DEBUG;_LIB"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -97,7 +97,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				Description="Creating Synesis-named library in lib directory ..."
-				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.mt.debug.lib&quot;"
+				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../../../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.mt.debug.lib&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -131,7 +131,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../wcrc,../include,$(STLSOFT)/include"
+				AdditionalIncludeDirectories="../../../src/wcrc,../../../include,$(STLSOFT)/include"
 				PreprocessorDefinitions="WIN64;_DEBUG;_LIB"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -180,7 +180,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				Description="Creating Synesis-named library in lib directory ..."
-				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.x64.mt.debug.lib&quot;"
+				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../../../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.x64.mt.debug.lib&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -213,7 +213,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../wcrc,../include,$(STLSOFT)/include,$(UNIXEM)/include"
+				AdditionalIncludeDirectories="../../../src/wcrc,../../../include,$(STLSOFT)/include,$(UNIXEM)/include"
 				PreprocessorDefinitions="UNIX;_DEBUG;_LIB;_STLSOFT_FORCE_ANY_COMPILER"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -261,7 +261,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				Description="Creating Synesis-named library in lib directory ..."
-				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.unix.mt.debug.lib&quot;"
+				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../../../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.unix.mt.debug.lib&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -295,7 +295,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../wcrc,../include,$(STLSOFT)/include,$(UNIXEM)/include"
+				AdditionalIncludeDirectories="../../../src/wcrc,../../../include,$(STLSOFT)/include,$(UNIXEM)/include"
 				PreprocessorDefinitions="UNIX;_DEBUG;_LIB;_STLSOFT_FORCE_ANY_COMPILER"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -343,7 +343,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				Description="Creating Synesis-named library in lib directory ..."
-				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.unix.x64.mt.debug.lib&quot;"
+				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../../../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.unix.x64.mt.debug.lib&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -378,7 +378,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				WholeProgramOptimization="true"
-				AdditionalIncludeDirectories="../wcrc,../include,$(STLSOFT)/include"
+				AdditionalIncludeDirectories="../../../src/wcrc,../../../include,$(STLSOFT)/include"
 				PreprocessorDefinitions="WIN32;NDEBUG;_LIB"
 				StringPooling="true"
 				RuntimeLibrary="0"
@@ -425,7 +425,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				Description="Creating Synesis-named library in lib directory ..."
-				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.mt.lib&quot;"
+				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../../../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.mt.lib&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -461,7 +461,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				WholeProgramOptimization="true"
-				AdditionalIncludeDirectories="../wcrc,../include,$(STLSOFT)/include"
+				AdditionalIncludeDirectories="../../../src/wcrc,../../../include,$(STLSOFT)/include"
 				PreprocessorDefinitions="WIN64;NDEBUG;_LIB"
 				StringPooling="true"
 				RuntimeLibrary="0"
@@ -508,7 +508,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				Description="Creating Synesis-named library in lib directory ..."
-				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.x64.mt.lib&quot;"
+				CommandLine="COPY /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)../../../lib/SynesisSoftware.WilliamsCRC.1.core.vc9.x64.mt.lib&quot;"
 			/>
 		</Configuration>
 	</Configurations>
@@ -520,7 +520,7 @@
 			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 			>
 			<File
-				RelativePath="..\src\WilliamsCRC.cpp"
+				RelativePath="..\..\..\src\WilliamsCRC.cpp"
 				>
 				<FileConfiguration
 					Name="Debug Multithreaded|Win32"
@@ -581,7 +581,7 @@
 				Name="Williams CRC Files"
 				>
 				<File
-					RelativePath="..\wcrc\crcmodel.cpp"
+					RelativePath="..\..\..\srwc\wcrc\crcmodel.cpp"
 					>
 					<FileConfiguration
 						Name="Debug Multithreaded|Win32"
@@ -645,7 +645,7 @@
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\wcrc\crcmodel.h"
+					RelativePath="..\..\..\src\wcrc\crcmodel.h"
 					>
 				</File>
 			</Filter>
@@ -655,7 +655,7 @@
 			Filter="h;hpp;hxx;hm;inl"
 			>
 			<File
-				RelativePath="..\include\WilliamsCRC\WilliamsCRC.h"
+				RelativePath="..\..\..\include\WilliamsCRC\WilliamsCRC.h"
 				>
 			</File>
 		</Filter>

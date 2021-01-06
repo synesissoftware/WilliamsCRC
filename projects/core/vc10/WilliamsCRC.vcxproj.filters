@@ -33,18 +33,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\WilliamsCRC.cpp">
+    <ClCompile Include="..\..\..\src\WilliamsCRC.cpp">
       <Filter>Implementation Files\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\wcrc\crcmodel.cpp">
+    <ClCompile Include="..\..\..\src\wcrc\crcmodel.cpp">
       <Filter>Implementation Files\wsrc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\wcrc\crcmodel.h">
+    <ClInclude Include="..\..\..\src\wcrc\crcmodel.h">
       <Filter>Header Files\wcrc</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\WilliamsCRC\WilliamsCRC.h">
+    <ClInclude Include="..\..\..\include\WilliamsCRC\WilliamsCRC.h">
       <Filter>Header Files\include\WilliamsCRC</Filter>
     </ClInclude>
   </ItemGroup>

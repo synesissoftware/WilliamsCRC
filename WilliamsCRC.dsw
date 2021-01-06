@@ -3,7 +3,7 @@ Microsoft Developer Studio Workspace File, Format Version 6.00
 
 ###############################################################################
 
-Project: "WilliamsCRC"=.\vc6\WilliamsCRC.dsp - Package Owner=<4>
+Project: "WilliamsCRC"=.\projects\core\vc6\WilliamsCRC.dsp - Package Owner=<4>
 
 Package=<5>
 {{{
