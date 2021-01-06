@@ -119,6 +119,10 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition=" $(Configuration.ToUpper().Contains('DEBUG'))">
     <ClCompile>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <MinimalRebuild Condition="!($(MSBuildToolsVersion) >= '16.0')">true</MinimalRebuild>
+      <MinimalRebuild Condition="  $(MSBuildToolsVersion) >= '16.0' ">false</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary Condition="!$(Configuration.ToUpper().Contains('DLL'))">MultiThreadedDebug</RuntimeLibrary>
       <RuntimeLibrary Condition=" $(Configuration.ToUpper().Contains('DLL'))">MultiThreadedDebugDLL</RuntimeLibrary>
