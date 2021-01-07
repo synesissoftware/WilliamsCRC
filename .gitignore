@@ -19,6 +19,8 @@ Release Multithreaded/
 Release Multithreaded Dll/
 Release Multithreaded pseudoUNIX/
 
+/bin/
+ 
 ipch/
 
 Win32/
