@@ -1,12 +1,26 @@
 
+// includes
+
 #include <WilliamsCRC/WilliamsCRC.h>
 
 #include <platformstl/filesystem/path_functions.h>
 #include <stlsoft/error/error_desc.hpp>
 
-#include <cassert>
 #include <iostream>
 #include <string>
+
+#include <assert.h>
+#include <stdlib.h>
+
+
+// compatibility
+
+#ifndef STLSOFT_CF_noexcept_KEYWORD_SUPPORT
+# define nullptr                                            NULL
+#endif
+
+
+// main
 
 int main(int argc, char* argv[])
 {
@@ -31,7 +45,7 @@ int main(int argc, char* argv[])
         break;
     case 3:
 
-        byteReadLimit = std::strtoul(argv[2], &endptr, 0);
+        byteReadLimit = ::strtoul(argv[2], &endptr, 0);
 
         assert(nullptr != endptr);
 
