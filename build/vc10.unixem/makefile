@@ -2,8 +2,8 @@
 # File:     makefile
 #
 # Purpose:  Generated makefile for the WilliamsCRC project,
-#           for the Visual C++ 10.0 (x86) compiler
-#           on the Win32 platform
+#           for the Visual C++ 10.0 (Win32, UNIXem) compiler
+#           on the Windows platform
 #
 # Created:  7th January 2021
 # Updated:  7th January 2021
@@ -18,6 +18,10 @@
 !error STLSOFT must be defined
 !endif # !STLSOFT
 
+!ifndef UNIXEM
+!error UNIXEM must be defined
+!endif # !UNIXEM
+
 ############################################################################
 # symbols
 
@@ -26,12 +30,15 @@
 
 COMP_TAG					=	vc10
 ARCH_TAG					=	
-OS_TAG						=	
+OS_TAG						=	.unix
 PROJ_TAG					=	SynesisSoftware.WilliamsCRC
 PROJ_VER_MAJOR				=	1
 PROJ_MOD_TAG				=	core
 PROJ_TAG_VER				=	$(PROJ_TAG).$(PROJ_VER_MAJOR).$(PROJ_MOD_TAG)
 COMP_ARCH_OS_TAG			=	$(COMP_TAG)$(OS_TAG)$(ARCH_TAG)
+
+UNIXEM_VER_MAJOR			=	1
+UNIXEM_TAG_VER				=	unixem.$(XTESTS_VER_MAJOR)
 
 PROJ_MAKEFILE_NAME			 =	makefile
 
@@ -79,6 +86,7 @@ COMMON_LIBPATHS			=
 
 LIBPATHS=\
  $(LIBS_LEADER)\
+ -libpath:"$(UNIXEM)\lib"\
  $(COMMON_LIBPATHS)\
  $(ENV_LIBPATHS)\
  \
@@ -107,9 +115,9 @@ TARGET_LIB_MT_R = \
 
 # #defines
 
-COMMON_DEFS 		=	-DWIN32
+COMMON_DEFS 		=	-DUNIX
 
-CUSTOM_DEFS			=
+CUSTOM_DEFS			=	-D_STLSOFT_FORCE_ANY_COMPILER
 
 # includes
 
@@ -247,6 +255,7 @@ CC_INCLUDES_BASE =\
  -I$(PROJ_INCLUDE_DIR)\
  -I$(STLSOFT)\include\
  $(COMMON_INCLUDES)\
+ -I"$(UNIXEM)\include"\
  \
 
 CC_INCLUDES_DLL_D =\
@@ -273,6 +282,7 @@ CPPC_INCLUDES_BASE =\
  -I$(PROJ_INCLUDE_DIR)\
  -I$(STLSOFT)\include\
  $(COMMON_INCLUDES)\
+ -I"$(UNIXEM)\include"\
  \
 
 CPPC_INCLUDES_DLL_D =\

@@ -2,8 +2,8 @@
 # File:     makefile
 #
 # Purpose:  Generated makefile for the WilliamsCRC project,
-#           for the Visual C++ 10.0 (x86) compiler
-#           on the Win32 platform
+#           for the Visual C++ 10.0 (x64) compiler
+#           on the Win64 platform
 #
 # Created:  7th January 2021
 # Updated:  7th January 2021
@@ -25,7 +25,7 @@
 # project & compiler version
 
 COMP_TAG					=	vc10
-ARCH_TAG					=	
+ARCH_TAG					=	.x64
 OS_TAG						=	
 PROJ_TAG					=	SynesisSoftware.WilliamsCRC
 PROJ_VER_MAJOR				=	1
@@ -107,7 +107,7 @@ TARGET_LIB_MT_R = \
 
 # #defines
 
-COMMON_DEFS 		=	-DWIN32
+COMMON_DEFS 		=	-DWIN64
 
 CUSTOM_DEFS			=
 
@@ -418,10 +418,10 @@ LD_INCLUDES_MT_R =\
  \
 
 
-LD_ARGS_DLL_D=               $(LD_FLAGS_DLL_D)  $(LD_INCLUDES_DLL_D)
-LD_ARGS_DLL_R=               $(LD_FLAGS_DLL_R)  $(LD_INCLUDES_DLL_R)
-LD_ARGS_MT_D=               $(LD_FLAGS_MT_D)  $(LD_INCLUDES_MT_D)
-LD_ARGS_MT_R=               $(LD_FLAGS_MT_R)  $(LD_INCLUDES_MT_R)
+LD_ARGS_DLL_D=               $(LD_FLAGS_DLL_D) -machine:x64 $(LD_INCLUDES_DLL_D)
+LD_ARGS_DLL_R=               $(LD_FLAGS_DLL_R) -machine:x64 $(LD_INCLUDES_DLL_R)
+LD_ARGS_MT_D=               $(LD_FLAGS_MT_D) -machine:x64 $(LD_INCLUDES_MT_D)
+LD_ARGS_MT_R=               $(LD_FLAGS_MT_R) -machine:x64 $(LD_INCLUDES_MT_R)
 
 ############################################################################
 # names
