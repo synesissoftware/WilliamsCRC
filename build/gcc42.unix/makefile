@@ -124,7 +124,7 @@ CC_F_COMPILE_ONLY			=	-c
 CC_F_MAXIMUM_SPEED			=	-O3
 CC_F_MINIMUM_SIZE			=	-O1
 CC_F_WARNING_ERR			=	-Werror
-CC_F_WARNING_MAX			=	-Wall -pedantic
+CC_F_WARNING_MAX			=	-Wall -pedantic -Wno-long-long
 
 CC_FLAGS_BASE =\
  $(CC_F_NOLOGO)\
