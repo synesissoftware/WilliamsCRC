@@ -1,29 +1,29 @@
-/*****************************************************************************
-/*                             Start of crcmodel.c                            
-/*****************************************************************************
-/*                                                                            
-/* Author : Ross Williams (ross@guest.adelaide.edu.au.).                      
-/* Date   : 3 June 1993.                                                      
-/* Status : Public domain.                                                    
-/*                                                                            
-/* Description : This is the implementation (.c) file for the reference       
-/* implementation of the Rocksoft^tm Model CRC Algorithm. For more            
-/* information on the Rocksoft^tm Model CRC Algorithm, see the document       
-/* titled "A Painless Guide to CRC Error Detection Algorithms" by Ross        
-/* Williams (ross@guest.adelaide.edu.au.). This document is likely to be in   
-/* "ftp.adelaide.edu.au/pub/rocksoft".                                        
-/*                                                                            
-/* Note: Rocksoft is a trademark of Rocksoft Pty Ltd, Adelaide, Australia.    
-/*                                                                            
-/*****************************************************************************
-/*                                                                            
-/* Implementation Notes                                                       
-/* --------------------                                                       
-/* To avoid inconsistencies, the specification of each function is not echoed 
-/* here. See the header file for a description of these functions.            
-/* This package is light on checking because I want to keep it short and      
-/* simple and portable (i.e. it would be too messy to distribute my entire    
-/* C culture (e.g. assertions package) with this package.                     
+/******************************************************************************/
+/*                             Start of crcmodel.c                            */
+/******************************************************************************/
+/*                                                                            */
+/* Author : Ross Williams (ross@guest.adelaide.edu.au.).                      */
+/* Date   : 3 June 1993.                                                      */
+/* Status : Public domain.                                                    */
+/*                                                                            */
+/* Description : This is the implementation (.c) file for the reference       */
+/* implementation of the Rocksoft^tm Model CRC Algorithm. For more            */
+/* information on the Rocksoft^tm Model CRC Algorithm, see the document       */
+/* titled "A Painless Guide to CRC Error Detection Algorithms" by Ross        */
+/* Williams (ross@guest.adelaide.edu.au.). This document is likely to be in   */
+/* "ftp.adelaide.edu.au/pub/rocksoft".                                        */
+/*                                                                            */
+/* Note: Rocksoft is a trademark of Rocksoft Pty Ltd, Adelaide, Australia.    */
+/*                                                                            */
+/******************************************************************************/
+/*                                                                            */
+/* Implementation Notes                                                       */
+/* --------------------                                                       */
+/* To avoid inconsistencies, the specification of each function is not echoed */
+/* here. See the header file for a description of these functions.            */
+/* This package is light on checking because I want to keep it short and      */
+/* simple and portable (i.e. it would be too messy to distribute my entire    */
+/* C culture (e.g. assertions package) with this package.                     */
 /*                                                                            */
 /******************************************************************************/
 
