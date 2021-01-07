@@ -160,7 +160,7 @@ CPPC_F_MAXIMUM_SPEED		=	-O3
 CPPC_F_MINIMUM_SIZE			=	-O1
 CPPC_F_RTTI_ON				=	
 CPPC_F_WARNING_ERR			=	-Werror
-CPPC_F_WARNING_MAX			=	-Wall -pedantic
+CPPC_F_WARNING_MAX			=	-Wall -pedantic -Wno-long-long
 
 CPPC_FLAGS_BASE =\
  $(CPPC_F_NOLOGO)\

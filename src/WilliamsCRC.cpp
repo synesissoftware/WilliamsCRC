@@ -4,7 +4,7 @@
  * Purpose:     Implementation of WilliamsCRC API.
  *
  * Created:     1st March 2010
- * Updated:     6th January 2021
+ * Updated:     7th January 2021
  *
  * Author:      Matthew Wilson
  *
@@ -42,7 +42,7 @@
 
 
 /* /////////////////////////////////////////////////////////////////////////
- * includes
+ * includes - 1
  */
 
 #include <WilliamsCRC/WilliamsCRC.h>
@@ -50,7 +50,11 @@
 #include <stlsoft/internal/safestr.h>
 #include <stlsoft/smartptr/scoped_handle.hpp>
 
+#define false							false
+#define true							true
 #include <crcmodel.h>
+#undef false
+#undef true
 
 #include <assert.h>
 #include <errno.h>
@@ -450,10 +454,14 @@ WilliamsCRC_CalculateFileCrcMax(
 }
 
 /* /////////////////////////////////////////////////////////////////////////
- * implementation
+ * includes - 2
  */
 
+#define false							false
+#define true							true
 #include <crcmodel.cpp>
+#undef false
+#undef true
 
 /* ///////////////////////////// end of file //////////////////////////// */
 

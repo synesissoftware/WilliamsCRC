@@ -15,7 +15,8 @@
 
 // compatibility
 
-#ifndef STLSOFT_CF_noexcept_KEYWORD_SUPPORT
+#if !defined(nullptr) && \
+	!defined(STLSOFT_CF_noexcept_KEYWORD_SUPPORT)
 # define nullptr                                            NULL
 #endif
 
