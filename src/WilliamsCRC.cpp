@@ -459,7 +459,7 @@ WilliamsCRC_CalculateFileCrcMax(
 
 #define false                                               false
 #define true                                                true
-#include <crcmodel.cpp>
+#include <crcmodel.c>
 #undef false
 #undef true
 

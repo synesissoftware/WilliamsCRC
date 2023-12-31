@@ -1,0 +1,4 @@
+
+
+#define OutputDebugString(...)
+#define TRACE(...)
