@@ -4,9 +4,9 @@
  * Purpose:     WilliamsCRC API
  *
  * Created:     1st March 2010
- * Updated:     7th January 2021
+ * Updated:     31st December 2023
  *
- * Copyright (c) 2019-2021, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2019-2023, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
@@ -46,7 +46,7 @@
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MAJOR    1
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MINOR    1
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_REVISION 3
-# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     11
+# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     12
 #endif /* !SYNSOFT_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -79,7 +79,7 @@
 #define SYNSOFT_WILLIAMSCRC_VER_MAJOR       1
 #define SYNSOFT_WILLIAMSCRC_VER_MINOR       2
 #define SYNSOFT_WILLIAMSCRC_VER_REVISION    3
-#define SYNSOFT_WILLIAMSCRC_VER             0x01020300
+#define SYNSOFT_WILLIAMSCRC_VER                             0x01020300
 
 /* /////////////////////////////////////////////////////////////////////////
  * typedefs
