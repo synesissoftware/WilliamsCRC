@@ -6,6 +6,7 @@
 #include <platformstl/filesystem/path_functions.h>
 #include <stlsoft/error/error_desc.hpp>
 
+#include <iomanip>
 #include <iostream>
 #include <string>
 
@@ -70,7 +71,7 @@ int main(int argc, char* argv[])
 
         std::cerr
             << platformstl::get_executable_name_from_path(argv[0])
-            << ": too many arguments"
+            << ": input-path not specified"
             << "; use --help for usage"
             << std::endl
             ;
@@ -85,7 +86,7 @@ int main(int argc, char* argv[])
     if (0 != rc)
     {
         std::cerr
-            << "failed to calculate CRC for '" << inputPath << "'"
+            << "failed to calculate " << (sizeof(crc_result_t) * 8) << "-bit CRC for '" << inputPath << "'"
             << ": " << stlsoft::error_desc(rc)
             << "; use --help for usage"
             << std::endl
@@ -95,8 +96,8 @@ int main(int argc, char* argv[])
     }
 
     std::cout
-        << "CRC of '" << inputPath << "'"
-        << ": " << result
+        << (sizeof(crc_result_t) * 8) << "-bit CRC of '" << inputPath << "'"
+        << ": 0x" << std::hex << result
         << std::endl;
 
     return EXIT_SUCCESS;
