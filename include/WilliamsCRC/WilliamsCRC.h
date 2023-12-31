@@ -45,13 +45,17 @@
 #ifndef SYNSOFT_DOCUMENTATION_SKIP_SECTION
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MAJOR    1
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MINOR    1
-# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_REVISION 3
-# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     12
+# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_REVISION 4
+# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     13
 #endif /* !SYNSOFT_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
  * includes
  */
+
+#if __cplusplus >= 201103L
+# include <stdint.h>
+#endif /* C++-11+ */
 
 #include <stddef.h>
 #include <stdio.h>
@@ -76,16 +80,20 @@
  * The current composite version number of Synesis Information Systems' WilliamsCRC
  */
 
-#define SYNSOFT_WILLIAMSCRC_VER_MAJOR       1
-#define SYNSOFT_WILLIAMSCRC_VER_MINOR       2
-#define SYNSOFT_WILLIAMSCRC_VER_REVISION    3
-#define SYNSOFT_WILLIAMSCRC_VER                             0x01020300
+#define SYNSOFT_WILLIAMSCRC_VER_MAJOR                       1
+#define SYNSOFT_WILLIAMSCRC_VER_MINOR                       2
+#define SYNSOFT_WILLIAMSCRC_VER_REVISION                    4
+#define SYNSOFT_WILLIAMSCRC_VER                             0x01020481
 
 /* /////////////////////////////////////////////////////////////////////////
  * typedefs
  */
 
+#if __cplusplus >= 201103L
+typedef uint32_t                                            crc_result_t;
+#else /* ? C++-11+ */
 typedef unsigned int                                        crc_result_t;
+#endif /* C++-11+ */
 
 struct                                                      WilliamsCRC_info_t;
 typedef struct WilliamsCRC_info_t*                          WilliamsCRC_t;
