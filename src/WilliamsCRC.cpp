@@ -4,11 +4,11 @@
  * Purpose:     Implementation of WilliamsCRC API.
  *
  * Created:     1st March 2010
- * Updated:     7th January 2021
+ * Updated:     31st December 2023
  *
  * Author:      Matthew Wilson
  *
- * Copyright (c) 2019-2021, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2019-2023, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
@@ -50,8 +50,8 @@
 #include <stlsoft/internal/safestr.h>
 #include <stlsoft/smartptr/scoped_handle.hpp>
 
-#define false							false
-#define true							true
+#define false                                               false
+#define true                                                true
 #include <crcmodel.h>
 #undef false
 #undef true
@@ -216,13 +216,13 @@ WilliamsCRC_CalculateBlockCrc_(
     cm_t    cm;
     int     r   =   WilliamsCRC_cm_init_(&cm);
 
-    if(0 == r)
+    if (0 == r)
     {
         stlsoft::scoped_handle<cm_t*>  scoper(&cm, WilliamsCRC_cm_destroy_);
 
         r = WilliamsCRC_Add_(cm, pv, cb);
 
-        if(0 == r)
+        if (0 == r)
         {
             r = WilliamsCRC_GetCRC_(cm, result);
         }
@@ -242,7 +242,7 @@ WilliamsCRC_CalculateFileCrc_(
     FILE* f;
     int   e = WilliamsCRC_fopen_(&f, path, "rb");
 
-    if(0 != e)
+    if (0 != e)
     {
         return e;
     }
@@ -269,7 +269,7 @@ WilliamsCRC_CalculateFileHandleCrc_(
 
     *pcbRead = 0;
 
-    if(0 == r)
+    if (0 == r)
     {
         stlsoft::scoped_handle<cm_t*>   scoper(&cm, WilliamsCRC_cm_destroy_);
 
@@ -284,7 +284,7 @@ WilliamsCRC_CalculateFileHandleCrc_(
 
             r = WilliamsCRC_Add_(cm, bytes, n);
 
-            if(0 != r)
+            if (0 != r)
             {
                 break;
             }
@@ -312,7 +312,7 @@ WilliamsCRC_CalculateFileHandleCrc_(
             }
         }}
 
-        if(0 == r)
+        if (0 == r)
         {
             r = WilliamsCRC_GetCRC_(cm, result);
         }
@@ -345,7 +345,7 @@ WilliamsCRC_Create(
 {
     *pwcrc = new WilliamsCRC_info_t();
 
-    if(NULL == *pwcrc)
+    if (NULL == *pwcrc)
     {
         return ENOMEM;
     }
@@ -360,7 +360,7 @@ WilliamsCRC_Destroy(
     WilliamsCRC_t wcrc
 )
 {
-    if(NULL != wcrc)
+    if (NULL != wcrc)
     {
         WilliamsCRC_cm_destroy_(&wcrc->cm);
 
@@ -457,8 +457,8 @@ WilliamsCRC_CalculateFileCrcMax(
  * includes - 2
  */
 
-#define false							false
-#define true							true
+#define false                                               false
+#define true                                                true
 #include <crcmodel.cpp>
 #undef false
 #undef true

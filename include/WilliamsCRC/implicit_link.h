@@ -4,9 +4,9 @@
  * Purpose:     Implicit linking for the WilliamsCRC API
  *
  * Created:     6th January 2021
- * Updated:     6th January 2021
+ * Updated:     31st December 2023
  *
- * Copyright (c) 2021, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2021-2023, Matthew Wilson and Synesis Information Systems
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -53,8 +53,8 @@
 #ifndef WILLIAMSCRC_DOCUMENTATION_SKIP_SECTION
 # define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_MAJOR      1
 # define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_MINOR      0
-# define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_REVISION   2
-# define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_EDIT       2
+# define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_REVISION   3
+# define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_EDIT       3
 #endif /* !WILLIAMSCRC_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -221,7 +221,7 @@
 #    if 0
 #    elif _MSC_VER < 1920
 #     define WILLIAMSCRC_IMPL_LINK_COMPILER_NAME            "vc15"
-#    elif _MSC_VER <= 1928
+#    elif _MSC_VER <= 1929
 #     define WILLIAMSCRC_IMPL_LINK_COMPILER_NAME            "vc16"
 #    else
 #     error Visual C++ version that is >= vc16 is not recognised
