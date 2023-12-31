@@ -6,7 +6,7 @@
 #           on the Unix platform
 #
 # Created:  7th January 2021
-# Updated:  7th January 2021
+# Updated:  31st December 2023
 #
 ############################################################################
 
@@ -24,44 +24,44 @@ endif # !STLSOFT
 ########################################
 # project & compiler version
 
-COMP_TAG					=	gcc42
-ARCH_TAG					=	
-OS_TAG						=	
-PROJ_TAG					=	SynesisSoftware.WilliamsCRC
-PROJ_VER_MAJOR				=	1
-PROJ_MOD_TAG				=	core
-PROJ_TAG_VER				=	$(PROJ_TAG).$(PROJ_VER_MAJOR).$(PROJ_MOD_TAG)
-COMP_ARCH_OS_TAG			=	$(COMP_TAG)$(OS_TAG)$(ARCH_TAG)
+COMP_TAG                    =   gcc42
+ARCH_TAG                    =
+OS_TAG                      =
+PROJ_TAG                    =   SynesisSoftware.WilliamsCRC
+PROJ_VER_MAJOR              =   1
+PROJ_MOD_TAG                =   core
+PROJ_TAG_VER                =   $(PROJ_TAG).$(PROJ_VER_MAJOR).$(PROJ_MOD_TAG)
+COMP_ARCH_OS_TAG            =   $(COMP_TAG)$(OS_TAG)$(ARCH_TAG)
 
-PROJ_MAKEFILE_NAME			 =	makefile
+PROJ_MAKEFILE_NAME          =   makefile
 
 ########################################
 # directories
 
-PROJ_BASE_DIR				=	../..
-PROJ_BIN_DIR				=	$(PROJ_BASE_DIR)/bin
-PROJ_INCLUDE_DIR			=	$(PROJ_BASE_DIR)/include
-PROJ_LIB_DIR				=	$(PROJ_BASE_DIR)/lib
-PROJ_OBJ_DIR				=	.
-PROJ_SRC_DIR				=	$(PROJ_BASE_DIR)/src
-PROJ_EXAMPLES_DIR			=	$(PROJ_BASE_DIR)/examples
-PROJ_SAMPLES_DIR			=	$(PROJ_BASE_DIR)/samples
-PROJ_TEST_ROOT_DIR			=	$(PROJ_BASE_DIR)/test
-PROJ_TEST_COMPONENT_DIR		=	$(PROJ_TEST_ROOT_DIR)/component
-PROJ_TEST_PERFORMANCE_DIR	=	$(PROJ_TEST_ROOT_DIR)/performance
-PROJ_TEST_SCRATCH_DIR		=	$(PROJ_TEST_ROOT_DIR)/scratch
-PROJ_TEST_UNIT_DIR			=	$(PROJ_TEST_ROOT_DIR)/unit
+PROJ_BASE_DIR               =   ../..
+PROJ_BIN_DIR                =   $(PROJ_BASE_DIR)/bin
+PROJ_INCLUDE_DIR            =   $(PROJ_BASE_DIR)/include
+PROJ_LIB_DIR                =   $(PROJ_BASE_DIR)/lib
+PROJ_OBJ_DIR                =   .
+PROJ_SRC_DIR                =   $(PROJ_BASE_DIR)/src
+PROJ_EXAMPLES_DIR           =   $(PROJ_BASE_DIR)/examples
+PROJ_SAMPLES_DIR            =   $(PROJ_BASE_DIR)/samples
+PROJ_TEST_ROOT_DIR          =   $(PROJ_BASE_DIR)/test
+PROJ_TEST_COMPONENT_DIR     =   $(PROJ_TEST_ROOT_DIR)/component
+PROJ_TEST_PERFORMANCE_DIR   =   $(PROJ_TEST_ROOT_DIR)/performance
+PROJ_TEST_SCRATCH_DIR       =   $(PROJ_TEST_ROOT_DIR)/scratch
+PROJ_TEST_UNIT_DIR          =   $(PROJ_TEST_ROOT_DIR)/unit
 
 ########################################
 # tools
 
-CC							=	gcc
-CPPC						=	g++
-AR							=	ar
-LD							=	g++
-RM							=	rm -f
-CP							=	cp
-RC							=	
+CC                          =   gcc
+CPPC                        =   g++
+AR                          =   ar
+LD                          =   g++
+RM                          =   rm -f
+CP                          =   cp
+RC                          =
 
 ########################################
 # tool arguments
@@ -69,12 +69,12 @@ RC							=
 
 # lib
 
-LIBS_LEADER 			=	
+LIBS_LEADER                 =
 
 # lib paths
 
-ENV_LIBPATHS		=
-COMMON_LIBPATHS			=
+ENV_LIBPATHS                =
+COMMON_LIBPATHS             =
 
 
 LIBPATHS=\
@@ -86,7 +86,7 @@ LIBPATHS=\
 
 # lib names
 
-VARIANT_LIB_COMMON			=	
+VARIANT_LIB_COMMON          =
 
 TARGET_LIB_MT_D = \
  -lpthread \
@@ -107,24 +107,24 @@ TARGET_LIB_ST_R = \
 
 # #defines
 
-COMMON_DEFS 		=	-Dunix
+COMMON_DEFS                 =   -Dunix
 
-CUSTOM_DEFS			=
+CUSTOM_DEFS                 =
 
 # includes
 
-COMMON_INCLUDES		=	
+COMMON_INCLUDES             =
 
 
 
 # CC flags
 
-CC_F_NOLOGO					=	
-CC_F_COMPILE_ONLY			=	-c
-CC_F_MAXIMUM_SPEED			=	-O3
-CC_F_MINIMUM_SIZE			=	-O1
-CC_F_WARNING_ERR			=	-Werror
-CC_F_WARNING_MAX			=	-Wall -pedantic -Wno-long-long
+CC_F_COMPILE_ONLY           =   -c
+CC_F_MAXIMUM_SPEED          =   -O3
+CC_F_MINIMUM_SIZE           =   -O1
+CC_F_NOLOGO                 =
+CC_F_WARNING_ERR            =   -Werror
+CC_F_WARNING_MAX            =   -Wall -pedantic -Wno-long-long
 
 CC_FLAGS_BASE =\
  $(CC_F_NOLOGO)\
@@ -153,22 +153,24 @@ CC_FLAGS_ST_R =\
 
 # CPPC flags
 
-CPPC_F_NOLOGO				=	
-CPPC_F_COMPILE_ONLY			=	-c
-CPPC_F_EXCEPTIONS_ON		=	
-CPPC_F_MAXIMUM_SPEED		=	-O3
-CPPC_F_MINIMUM_SIZE			=	-O1
-CPPC_F_RTTI_ON				=	
-CPPC_F_WARNING_ERR			=	-Werror
-CPPC_F_WARNING_MAX			=	-Wall -pedantic -Wno-long-long
+CPPC_F_COMPILE_ONLY         =   -c
+CPPC_F_CXX_STD_VER          =   -std=c++11
+CPPC_F_EXCEPTIONS_ON        =
+CPPC_F_MAXIMUM_SPEED        =   -O3
+CPPC_F_MINIMUM_SIZE         =   -O1
+CPPC_F_NOLOGO               =
+CPPC_F_RTTI_ON              =
+CPPC_F_WARNING_ERR          =   -Werror
+CPPC_F_WARNING_MAX          =   -Wall -pedantic -Wno-long-long
 
 CPPC_FLAGS_BASE =\
- $(CPPC_F_NOLOGO)\
  $(CPPC_F_COMPILE_ONLY)\
+ $(CPPC_F_CXX_STD_VER)\
  $(CPPC_F_EXCEPTIONS_ON)\
+ $(CPPC_F_NOLOGO)\
  $(CPPC_F_RTTI_ON)\
- $(CPPC_F_WARNING_MAX)\
  $(CPPC_F_WARNING_ERR)\
+ $(CPPC_F_WARNING_MAX)\
  \
 
 CPPC_FLAGS_MT_D =\
@@ -369,12 +371,12 @@ CPPC_ARGS_CORE_ST_R=\
 
 # AR args
 
-AR_ARGS 			=	
+AR_ARGS                     =
 
 
 # LD args
 
-LD_F_NOLOGO					=	
+LD_F_NOLOGO                 =
 
 LD_FLAGS_BASE =\
  $(LD_F_NOLOGO)\
@@ -418,10 +420,10 @@ LD_INCLUDES_ST_R =\
  \
 
 
-LD_ARGS_MT_D=               $(LD_FLAGS_MT_D)  $(LD_INCLUDES_MT_D)
-LD_ARGS_MT_R=               $(LD_FLAGS_MT_R)  $(LD_INCLUDES_MT_R)
-LD_ARGS_ST_D=               $(LD_FLAGS_ST_D)  $(LD_INCLUDES_ST_D)
-LD_ARGS_ST_R=               $(LD_FLAGS_ST_R)  $(LD_INCLUDES_ST_R)
+LD_ARGS_MT_D                =   $(LD_FLAGS_MT_D) $(LD_INCLUDES_MT_D)
+LD_ARGS_MT_R                =   $(LD_FLAGS_MT_R) $(LD_INCLUDES_MT_R)
+LD_ARGS_ST_D                =   $(LD_FLAGS_ST_D) $(LD_INCLUDES_ST_D)
+LD_ARGS_ST_R                =   $(LD_FLAGS_ST_R) $(LD_INCLUDES_ST_R)
 
 ############################################################################
 # names
@@ -433,10 +435,10 @@ LD_ARGS_ST_R=               $(LD_FLAGS_ST_R)  $(LD_INCLUDES_ST_R)
 # libraries
 
 # core
-LIB_CORE_MT_D			=	$(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).$(COMP_ARCH_OS_TAG).mt.debug.a
-LIB_CORE_MT_R			=	$(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).$(COMP_ARCH_OS_TAG).mt.a
-LIB_CORE_ST_D			=	$(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).$(COMP_ARCH_OS_TAG).debug.a
-LIB_CORE_ST_R			=	$(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).$(COMP_ARCH_OS_TAG).a
+LIB_CORE_MT_D               =   $(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).$(COMP_ARCH_OS_TAG).mt.debug.a
+LIB_CORE_MT_R               =   $(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).$(COMP_ARCH_OS_TAG).mt.a
+LIB_CORE_ST_D               =   $(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).$(COMP_ARCH_OS_TAG).debug.a
+LIB_CORE_ST_R               =   $(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).$(COMP_ARCH_OS_TAG).a
 
 TARGETS_LIB_CORE=\
  $(LIB_CORE_MT_D)\
@@ -459,10 +461,10 @@ TARGETS_LIB_CORE=\
 ##############################
 # scratch tests
 
-TARG_TEST_SCRT_flchksm_MT_D		=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.scratch.file_checksum.$(COMP_ARCH_OS_TAG).mt.debug
-TARG_TEST_SCRT_flchksm_MT_R		=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.scratch.file_checksum.$(COMP_ARCH_OS_TAG).mt
-TARG_TEST_SCRT_flchksm_ST_D		=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.scratch.file_checksum.$(COMP_ARCH_OS_TAG).debug
-TARG_TEST_SCRT_flchksm_ST_R		=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.scratch.file_checksum.$(COMP_ARCH_OS_TAG)
+TARG_TEST_SCRT_flchksm_MT_D =   $(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.scratch.file_checksum.$(COMP_ARCH_OS_TAG).mt.debug
+TARG_TEST_SCRT_flchksm_MT_R =   $(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.scratch.file_checksum.$(COMP_ARCH_OS_TAG).mt
+TARG_TEST_SCRT_flchksm_ST_D =   $(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.scratch.file_checksum.$(COMP_ARCH_OS_TAG).debug
+TARG_TEST_SCRT_flchksm_ST_R =   $(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.scratch.file_checksum.$(COMP_ARCH_OS_TAG)
 
 TARGETS_TEST_SCRATCH=\
  $(TARG_TEST_SCRT_flchksm_MT_D)\
@@ -483,25 +485,25 @@ TARGETS_TEST_SCRATCH=\
 
 # core
 
-OBJ_lib_core_MT_D =			$(PROJ_OBJ_DIR)/$(PROJ_TAG).core.mt.debug.o
+OBJ_lib_core_MT_D = $(PROJ_OBJ_DIR)/$(PROJ_TAG).core.mt.debug.o
 
 OBJ_CORE_MT_D=\
  $(OBJ_lib_core_MT_D)\
  \
 
-OBJ_lib_core_MT_R =			$(PROJ_OBJ_DIR)/$(PROJ_TAG).core.mt.o
+OBJ_lib_core_MT_R = $(PROJ_OBJ_DIR)/$(PROJ_TAG).core.mt.o
 
 OBJ_CORE_MT_R=\
  $(OBJ_lib_core_MT_R)\
  \
 
-OBJ_lib_core_ST_D =			$(PROJ_OBJ_DIR)/$(PROJ_TAG).core.debug.o
+OBJ_lib_core_ST_D = $(PROJ_OBJ_DIR)/$(PROJ_TAG).core.debug.o
 
 OBJ_CORE_ST_D=\
  $(OBJ_lib_core_ST_D)\
  \
 
-OBJ_lib_core_ST_R =			$(PROJ_OBJ_DIR)/$(PROJ_TAG).core.o
+OBJ_lib_core_ST_R = $(PROJ_OBJ_DIR)/$(PROJ_TAG).core.o
 
 OBJ_CORE_ST_R=\
  $(OBJ_lib_core_ST_R)\
@@ -522,10 +524,10 @@ OBJ_CORE_ST_R=\
 ##############################
 # scratch tests
 
-OBJ_TEST_SCRT_flchksm_MT_D		=	$(PROJ_OBJ_DIR)/test.scratch.file_checksum.mt.debug.o
-OBJ_TEST_SCRT_flchksm_MT_R		=	$(PROJ_OBJ_DIR)/test.scratch.file_checksum.mt.o
-OBJ_TEST_SCRT_flchksm_ST_D		=	$(PROJ_OBJ_DIR)/test.scratch.file_checksum.debug.o
-OBJ_TEST_SCRT_flchksm_ST_R		=	$(PROJ_OBJ_DIR)/test.scratch.file_checksum.o
+OBJ_TEST_SCRT_flchksm_MT_D  =   $(PROJ_OBJ_DIR)/test.scratch.file_checksum.mt.debug.o
+OBJ_TEST_SCRT_flchksm_MT_R  =   $(PROJ_OBJ_DIR)/test.scratch.file_checksum.mt.o
+OBJ_TEST_SCRT_flchksm_ST_D  =   $(PROJ_OBJ_DIR)/test.scratch.file_checksum.debug.o
+OBJ_TEST_SCRT_flchksm_ST_R  =   $(PROJ_OBJ_DIR)/test.scratch.file_checksum.o
 
 ##############################
 # unit tests
@@ -536,18 +538,18 @@ OBJ_TEST_SCRT_flchksm_ST_R		=	$(PROJ_OBJ_DIR)/test.scratch.file_checksum.o
 
 # primary
 
-_default:					build
+_default:                   build
 
 # infrastructure
 
-check.lib.dir:				$(PROJ_MAKEFILE_NAME)
+check.lib.dir:              $(PROJ_MAKEFILE_NAME)
 	@-mkdir -p $(PROJ_LIB_DIR)
 
-check.bin.dir:				$(PROJ_MAKEFILE_NAME)
+check.bin.dir:              $(PROJ_MAKEFILE_NAME)
 	@-mkdir -p $(PROJ_BIN_DIR)
 
 
-build.libs.core:	\
+build.libs.core: \
  check.lib.dir \
  $(TARGETS_LIB_CORE) \
  \
@@ -560,13 +562,13 @@ build.test.unit:
 
 build.test.component:
 
-build.test.scratch:	\
+build.test.scratch: \
  check.bin.dir \
  $(TARGETS_TEST_SCRATCH) \
  \
 
 
-build.test:	\
+build.test: \
  build.test.unit \
  build.test.component \
  build.test.scratch \
@@ -577,7 +579,7 @@ build.examples:
 build.samples:
 
 
-build:	\
+build: \
  compile \
  build.libs \
  build.test \
@@ -585,7 +587,7 @@ build:	\
  build.samples \
  \
 
-compile:	\
+compile: \
  \
 
 clean.libs.core:
@@ -599,7 +601,7 @@ clean.libs.core:
 	@-$(RM) $(OBJ_CORE_ST_D)
 	@-$(RM) $(OBJ_CORE_ST_R)
 
-clean.libs.all:	\
+clean.libs.all: \
  clean.libs.core \
  \
 
@@ -621,7 +623,7 @@ clean.test.unit:
 	$(RM) $(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.*.$(COMP_ARCH_OS_TAG).debug
 	$(RM) $(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.*.$(COMP_ARCH_OS_TAG)
 
-clean.test:	\
+clean.test: \
  clean.test.component \
  clean.test.scratch \
  clean.test.unit \
@@ -631,14 +633,14 @@ clean.examples:
 
 clean.samples:
 
-clean:	\
+clean: \
  clean.libs.all \
  clean.test \
  clean.examples \
  clean.samples \
  \
 
-test:	\
+test: \
  \
 
 
@@ -657,28 +659,28 @@ $(LIB_CORE_MT_D): $(OBJ_CORE_MT_D) $(PROJ_MAKEFILE_NAME)
 	@-mkdir -p $(PROJ_LIB_DIR)
 	$(AR) $(AR_ARGS) -r $@ $(OBJ_CORE_MT_D)
 
-$(OBJ_lib_core_MT_D):	$(PROJ_MAKEFILE_NAME) $(PROJ_SRC_DIR)/WilliamsCRC.cpp
+$(OBJ_lib_core_MT_D): $(PROJ_MAKEFILE_NAME) $(PROJ_SRC_DIR)/WilliamsCRC.cpp
 	$(CPPC) $(CPPC_ARGS_CORE_MT_D) $(CPPC_INCLUDES) -o $@ $(PROJ_SRC_DIR)/WilliamsCRC.cpp
 
 $(LIB_CORE_MT_R): $(OBJ_CORE_MT_R) $(PROJ_MAKEFILE_NAME)
 	@-mkdir -p $(PROJ_LIB_DIR)
 	$(AR) $(AR_ARGS) -r $@ $(OBJ_CORE_MT_R)
 
-$(OBJ_lib_core_MT_R):	$(PROJ_MAKEFILE_NAME) $(PROJ_SRC_DIR)/WilliamsCRC.cpp
+$(OBJ_lib_core_MT_R): $(PROJ_MAKEFILE_NAME) $(PROJ_SRC_DIR)/WilliamsCRC.cpp
 	$(CPPC) $(CPPC_ARGS_CORE_MT_R) $(CPPC_INCLUDES) -o $@ $(PROJ_SRC_DIR)/WilliamsCRC.cpp
 
 $(LIB_CORE_ST_D): $(OBJ_CORE_ST_D) $(PROJ_MAKEFILE_NAME)
 	@-mkdir -p $(PROJ_LIB_DIR)
 	$(AR) $(AR_ARGS) -r $@ $(OBJ_CORE_ST_D)
 
-$(OBJ_lib_core_ST_D):	$(PROJ_MAKEFILE_NAME) $(PROJ_SRC_DIR)/WilliamsCRC.cpp
+$(OBJ_lib_core_ST_D): $(PROJ_MAKEFILE_NAME) $(PROJ_SRC_DIR)/WilliamsCRC.cpp
 	$(CPPC) $(CPPC_ARGS_CORE_ST_D) $(CPPC_INCLUDES) -o $@ $(PROJ_SRC_DIR)/WilliamsCRC.cpp
 
 $(LIB_CORE_ST_R): $(OBJ_CORE_ST_R) $(PROJ_MAKEFILE_NAME)
 	@-mkdir -p $(PROJ_LIB_DIR)
 	$(AR) $(AR_ARGS) -r $@ $(OBJ_CORE_ST_R)
 
-$(OBJ_lib_core_ST_R):	$(PROJ_MAKEFILE_NAME) $(PROJ_SRC_DIR)/WilliamsCRC.cpp
+$(OBJ_lib_core_ST_R): $(PROJ_MAKEFILE_NAME) $(PROJ_SRC_DIR)/WilliamsCRC.cpp
 	$(CPPC) $(CPPC_ARGS_CORE_ST_R) $(CPPC_INCLUDES) -o $@ $(PROJ_SRC_DIR)/WilliamsCRC.cpp
 
 ##################################################
