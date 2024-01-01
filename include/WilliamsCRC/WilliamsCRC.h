@@ -4,9 +4,9 @@
  * Purpose:     WilliamsCRC API
  *
  * Created:     1st March 2010
- * Updated:     31st December 2023
+ * Updated:     1st January 2024
  *
- * Copyright (c) 2019-2023, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
@@ -45,15 +45,16 @@
 #ifndef SYNSOFT_DOCUMENTATION_SKIP_SECTION
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MAJOR    1
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MINOR    1
-# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_REVISION 4
-# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     13
+# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_REVISION 5
+# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     14
 #endif /* !SYNSOFT_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
  * includes
  */
 
-#if __cplusplus >= 201103L
+#if defined(__cplusplus) && \
+    __cplusplus >= 201103L
 # include <stdint.h>
 #endif /* C++-11+ */
 
@@ -82,14 +83,15 @@
 
 #define SYNSOFT_WILLIAMSCRC_VER_MAJOR                       1
 #define SYNSOFT_WILLIAMSCRC_VER_MINOR                       2
-#define SYNSOFT_WILLIAMSCRC_VER_REVISION                    4
-#define SYNSOFT_WILLIAMSCRC_VER                             0x01020481
+#define SYNSOFT_WILLIAMSCRC_VER_REVISION                    5
+#define SYNSOFT_WILLIAMSCRC_VER                             0x01020581
 
 /* /////////////////////////////////////////////////////////////////////////
  * typedefs
  */
 
-#if __cplusplus >= 201103L
+#if defined(__cplusplus) && \
+    __cplusplus >= 201103L
 typedef uint32_t                                            crc_result_t;
 #else /* ? C++-11+ */
 typedef unsigned int                                        crc_result_t;
