@@ -4,9 +4,9 @@
  * Purpose:     Implicit linking for the WilliamsCRC API
  *
  * Created:     6th January 2021
- * Updated:     31st December 2023
+ * Updated:     1st January 2024
  *
- * Copyright (c) 2021-2023, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2021-2024, Matthew Wilson and Synesis Information Systems
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -54,7 +54,7 @@
 # define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_MAJOR      1
 # define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_MINOR      0
 # define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_REVISION   3
-# define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_EDIT       3
+# define WILLIAMSCRC_VER_WILLIAMSCRC_H_IMPLICIT_LINK_EDIT       4
 #endif /* !WILLIAMSCRC_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -309,18 +309,19 @@
     * [lib]<library-basename>.<major-version>.<module-name>.<compiler-name>[.<os-arch-tag>][.<char-encoding-tag>][.<threading-tag>][.<nox-tag>][.<debug-tag>].{a|lib}
     */
 
-#  define WILLIAMSCRC_IMPL_LINK_LIBRARY_NAME                WILLIAMSCRC_IMPL_LINK_PREFIX \
-                                                            WILLIAMSCRC_IMPL_LINK_LIBRARY_BASENAME \
-                                                            WILLIAMSCRC_IMPL_LINK_MAJOR_VERSION \
-                                                            "." WILLIAMSCRC_IMPL_LINK_LIBRARY_MODULE \
-                                                            WILLIAMSCRC_IMPL_LINK_MODULE_NAME \
-                                                            "." WILLIAMSCRC_IMPL_LINK_COMPILER_NAME \
-                                                            WILLIAMSCRC_IMPL_LINK_OS_TAG \
-                                                            WILLIAMSCRC_IMPL_LINK_ARCH_TAG \
-                                                            WILLIAMSCRC_IMPL_LINK_ENCODING_TAG \
-                                                            WILLIAMSCRC_IMPL_LINK_THREADING_TAG \
-                                                            WILLIAMSCRC_IMPL_LINK_DEBUG_TAG \
-                                                            WILLIAMSCRC_IMPL_LINK_SUFFIX
+#  define WILLIAMSCRC_IMPL_LINK_LIBRARY_NAME  \
+            WILLIAMSCRC_IMPL_LINK_PREFIX \
+            WILLIAMSCRC_IMPL_LINK_LIBRARY_BASENAME \
+            WILLIAMSCRC_IMPL_LINK_MAJOR_VERSION \
+            "." WILLIAMSCRC_IMPL_LINK_LIBRARY_MODULE \
+            WILLIAMSCRC_IMPL_LINK_MODULE_NAME \
+            "." WILLIAMSCRC_IMPL_LINK_COMPILER_NAME \
+            WILLIAMSCRC_IMPL_LINK_OS_TAG \
+            WILLIAMSCRC_IMPL_LINK_ARCH_TAG \
+            WILLIAMSCRC_IMPL_LINK_ENCODING_TAG \
+            WILLIAMSCRC_IMPL_LINK_THREADING_TAG \
+            WILLIAMSCRC_IMPL_LINK_DEBUG_TAG \
+            WILLIAMSCRC_IMPL_LINK_SUFFIX
 
 
 #  pragma message("lib: " WILLIAMSCRC_IMPL_LINK_LIBRARY_NAME)

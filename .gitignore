@@ -80,12 +80,15 @@ build/makefile.tools.xml
 *.a
 *.app
 *.aps
+*.b64
+*.bak
 *.chm
 *.d
 *.dll
 *.dylib
 *.exe
 *.gch
+*.idb
 *.ilk
 *.iobj
 *.ipch
@@ -104,6 +107,7 @@ build/makefile.tools.xml
 *.out
 *.pch
 *.pdb
+*.res
 *.sbr
 *.scc
 *.sdf
@@ -111,7 +115,9 @@ build/makefile.tools.xml
 *.so
 *.suo
 *.swp
+*.tlog
 *.tmp
+*.unsuccessfulbuild
 *.vcproj*.user
 *.vcxproj*.user
 *.zip

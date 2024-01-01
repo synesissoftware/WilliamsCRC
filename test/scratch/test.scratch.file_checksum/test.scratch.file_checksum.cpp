@@ -17,7 +17,7 @@
 // compatibility
 
 #if !defined(nullptr) && \
-	!defined(STLSOFT_CF_noexcept_KEYWORD_SUPPORT)
+    !defined(STLSOFT_CF_noexcept_KEYWORD_SUPPORT)
 # define nullptr                                            NULL
 #endif
 
@@ -26,6 +26,9 @@
 
 int main(int argc, char* argv[])
 {
+    const int           BIT_SIZE    =   30;
+    const crc_poly_t    POLYNOMIAL  =   0xEDB88320; /* CRC-32 (Reversed) */
+
     size_t  byteReadLimit = 0;
     char*   endptr;
 
@@ -81,12 +84,20 @@ int main(int argc, char* argv[])
 
     char const* const   inputPath   =   argv[1];
     crc_result_t        result;
-    int const           rc          =   WilliamsCRC_CalculateFileCrcMax(inputPath, byteReadLimit, &result, nullptr);
+    size_t              numRead;
+    int const           rc          =   WilliamsCRC_CalculateFileCrcMax(
+            inputPath
+        ,   byteReadLimit
+        ,   BIT_SIZE
+        ,   POLYNOMIAL
+        ,   &result
+        ,   &numRead
+        );
 
     if (0 != rc)
     {
         std::cerr
-            << "failed to calculate " << (sizeof(crc_result_t) * 8) << "-bit CRC for '" << inputPath << "'"
+            << "failed to calculate " << BIT_SIZE << "-bit CRC for '" << inputPath << "'"
             << ": " << stlsoft::error_desc(rc)
             << "; use --help for usage"
             << std::endl
@@ -96,8 +107,8 @@ int main(int argc, char* argv[])
     }
 
     std::cout
-        << (sizeof(crc_result_t) * 8) << "-bit CRC of '" << inputPath << "'"
-        << ": 0x" << std::hex << result
+        << BIT_SIZE << "-bit CRC of (" << numRead << " byte(s) of) '" << inputPath << "' with polynomial 0x" << std::hex << POLYNOMIAL
+        << ": 0x" << std::setw(8) << std::setfill('0') << std::hex << result
         << std::endl;
 
     return EXIT_SUCCESS;
