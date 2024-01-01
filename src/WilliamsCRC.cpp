@@ -4,11 +4,11 @@
  * Purpose:     Implementation of WilliamsCRC API.
  *
  * Created:     1st March 2010
- * Updated:     31st December 2023
+ * Updated:     1st January 2024
  *
  * Author:      Matthew Wilson
  *
- * Copyright (c) 2019-2023, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
