@@ -1,7 +1,7 @@
 
 if (APPLE)
 
-    message("adding '/usr/local/include' to include-directories for 'src'")
+    message("-- -- adding '/usr/local/include' to include-directories for 'src'")
 
     include_directories("/usr/local/include")
 endif()
