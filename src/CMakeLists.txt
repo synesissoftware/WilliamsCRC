@@ -1,12 +1,4 @@
 
-if (APPLE)
-
-    message("-- -- adding '/usr/local/include' to include-directories for 'src'")
-
-    include_directories("/usr/local/include")
-endif()
-
-
 set(BINDING_SRC_DIR .)
 set(WILLIAMS_SRC_DIR ./wcrc)
 
@@ -23,6 +15,13 @@ file(GLOB WILLIAMS_SRCS
 add_library(WilliamsCRC
     ${BINDING_SRCS}
 )
+
+if (APPLE)
+
+    message("-- -- adding '/usr/local/include' to include-directories for 'src'")
+
+    include_directories("/usr/local/include")
+endif()
 
 target_include_directories(WilliamsCRC
     PRIVATE "${WILLIAMS_SRC_DIR}"
