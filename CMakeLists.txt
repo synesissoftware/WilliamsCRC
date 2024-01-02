@@ -35,10 +35,13 @@ project(WilliamsCRC
     LANGUAGES C CXX
 )
 
+string(TOLOWER ${PROJECT_NAME} PROJECT_NAME_LOWER)
+string(TOUPPER ${PROJECT_NAME} PROJECT_NAME_UPPER)
+
 # handle version number
-set(RX_WS "[ \t]")
 set(RX_PROJ_TAG "SYNSOFT_WILLIAMSCRC")
-file(READ "${CMAKE_SOURCE_DIR}/include/WilliamsCRC/WilliamsCRC.h" _header_file)
+set(RX_WS "[ \t]")
+file(READ "${CMAKE_SOURCE_DIR}/include/${PROJECT_NAME_LOWER}/${PROJECT_NAME_LOWER}.h" _header_file)
 string(REGEX MATCH "#${RX_WS}*define${RX_WS}+_?${RX_PROJ_TAG}_VER_MAJOR${RX_WS}+([0-9]+)" MAJOR_DUMMY ${_header_file})
 set(_VERSION_MAJOR ${CMAKE_MATCH_1})
 string(REGEX MATCH "#${RX_WS}*define${RX_WS}+_?${RX_PROJ_TAG}_VER_MINOR${RX_WS}+([0-9]+)" MINOR_DUMMY ${_header_file})
