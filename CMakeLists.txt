@@ -5,7 +5,7 @@
 # Purpose:  Top-level CMake lists file for WilliamsCRC
 #
 # Created:  31st December 2023
-# Updated:  31st December 2023
+# Updated:  2nd January 2024
 #
 # ######################################################################## #
 
@@ -18,9 +18,9 @@ cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
 # require out-of-source builds
 file(TO_CMAKE_PATH "${CMAKE_CURRENT_BINARY_DIR}/CMakeLists.txt" LOC_PATH)
 if(EXISTS "${LOC_PATH}")
+
     message(FATAL_ERROR "You cannot build in a source directory (or any directory with a CMakeLists.txt file). Please make a build subdirectory. Feel free to remove CMakeCache.txt and CMakeFiles.")
 endif()
-
 
 # directory for CMake specific extensions and source files.
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
@@ -54,6 +54,7 @@ set(PROJECT_VERSION "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT
 
 message(NOTICE "Generating CMake build scripts for ${PROJECT_NAME} ${PROJECT_VERSION}.")
 
+
 # adhere strictly to C and C++ standards plus extensions. These are actually
 # useless since we do not compile anything; they merely state our intention.
 set(CMAKE_C_STANDARD 99)
@@ -73,8 +74,36 @@ include(GNUInstallDirs)
 
 # ##########################################################
 # STLSoft
+#
+# We provide flexibility here, as in:
+# 1. if a CMake variable STLSOFT is provided then it is used; otherwise
+# 2. if an environment variable STLSOFT is provided then it then it is used; otherwise
+# 3. if the package STLSoft (via find_package()) is found then it is used; otherwise
+# 4. we abort
 
-find_package(STLSoft 1.10.1 REQUIRED)
+if(NOT DEFINED STLSOFT AND NOT DEFINED ENV{STLSOFT})
+
+    set(STLSoft_REQUIRED_VERSION_ 1.10.2)
+
+    find_package(STLSoft ${STLSoft_REQUIRED_VERSION_} REQUIRED)
+
+    message("-- CMake package STLSoft found (version ${STLSoft_VERSION}; ${STLSoft_REQUIRED_VERSION_} requested)")
+else()
+
+    if(DEFINED STLSOFT)
+
+        message("-- STLSOFT provided as CMake variable with value ${STLSOFT}")
+
+        set(STLSOFT_INCLUDE_DIR ${STLSOFT}/include)
+    else()
+
+        message("-- STLSOFT provided as environment variable with value $ENV{STLSOFT}")
+
+        set(STLSOFT_INCLUDE_DIR $ENV{STLSOFT}/include)
+    endif()
+
+    include_directories(${STLSOFT_INCLUDE_DIR})
+endif()
 
 
 # ##########################################################
@@ -92,6 +121,7 @@ add_subdirectory(src)
 include(CTest)
 
 if(BUILD_TESTING)
+
     add_subdirectory(test)
 endif()
 
@@ -101,6 +131,7 @@ endif()
 
 option(BUILD_EXAMPLES "Build examples" ON)
 if(BUILD_EXAMPLES)
+
     add_subdirectory(examples)
 endif()
 
@@ -115,8 +146,6 @@ endif()
 include(CMakePackageConfigHelpers)
 
 string(TOLOWER ${PROJECT_NAME} EXPORT_NAME)
-
-
 
 
 
