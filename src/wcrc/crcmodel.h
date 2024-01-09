@@ -81,6 +81,7 @@ typedef unsigned char * p_ubyte_;
 #ifndef true
 #define false 0
 #define true  1
+#define bool  int
 #endif
 
 /* Change to the second definition if you don't have prototypes. */
