@@ -1,13 +1,13 @@
 
-add_executable(test.scratch.file_checksum
-    test.scratch.file_checksum.cpp
+add_executable(test.scratch.versions
+    test.scratch.versions.c
 )
 
-target_link_libraries(test.scratch.file_checksum
+target_link_libraries(test.scratch.versions
     WilliamsCRC
 )
 
-target_compile_options(test.scratch.file_checksum PRIVATE
+target_compile_options(test.scratch.versions PRIVATE
     $<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>:
         -Werror -Wall -Wextra -pedantic
     >

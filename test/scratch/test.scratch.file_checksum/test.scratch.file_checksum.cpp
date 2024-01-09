@@ -1,5 +1,7 @@
 
-// includes
+/* /////////////////////////////////////////////////////////////////////////
+ * includes
+ */
 
 #include <WilliamsCRC/WilliamsCRC.h>
 
@@ -14,7 +16,9 @@
 #include <stdlib.h>
 
 
-// compatibility
+/* /////////////////////////////////////////////////////////////////////////
+ * compatibility
+ */
 
 #if !defined(nullptr) && \
     !defined(STLSOFT_CF_noexcept_KEYWORD_SUPPORT)
@@ -22,7 +26,9 @@
 #endif
 
 
-// main
+/* /////////////////////////////////////////////////////////////////////////
+ * main()
+ */
 
 int main(int argc, char* argv[])
 {
