@@ -4,7 +4,7 @@
  * Purpose:     WilliamsCRC API
  *
  * Created:     1st March 2010
- * Updated:     9th January 2024
+ * Updated:     30th June 2024
  *
  * Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
@@ -46,8 +46,9 @@
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MAJOR    1
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_MINOR    1
 # define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_REVISION 6
-# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     15
+# define SYNSOFT_VER_WILLIAMSCRC_H_WILLIAMSCRC_EDIT     16
 #endif /* !SYNSOFT_DOCUMENTATION_SKIP_SECTION */
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * includes
@@ -60,6 +61,7 @@
 
 #include <stddef.h>
 #include <stdio.h>
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * version information
@@ -87,6 +89,7 @@
 #define SYNSOFT_WILLIAMSCRC_VER_REVISION                    0
 #define SYNSOFT_WILLIAMSCRC_VER                             0x020000ff
 
+
 /* /////////////////////////////////////////////////////////////////////////
  * typedefs
  */
@@ -111,6 +114,7 @@ typedef int                                                 crc_poly_t;
 struct                                                      WilliamsCRC_info_t;
 /** CRC context structure */
 typedef struct WilliamsCRC_info_t*                          WilliamsCRC_t;
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * API
@@ -342,6 +346,7 @@ WilliamsCRC_CalculateFileHandleCrcMax(
 #ifdef __cplusplus
 } /* extern "C" */
 #endif
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * inclusion control

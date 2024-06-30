@@ -17,7 +17,7 @@ WilliamsCRC is a port/wrapper of Ross Williams' CRC library
 Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
 Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
 Copyright (c) 1993, Ross Williams
-Runs all (matching) unit-test programs
+Runs all (matching) performance-test and scratch-test programs
 
 $ScriptPath [ ... flags/options ... ]
 
@@ -59,7 +59,7 @@ status=0
 
 if make; then
 
-    for f in $(find $Dir -type f -perm +111 '(' -name 'test_unit*' -o -name 'test.unit.*' ')') $(find $Dir -type f -perm +111 '(' -name 'test_component*' -o -name 'test.component.*' ')')
+    for f in $(find $Dir -type f -perm +111 '(' -name 'test_scratch*' -o -name 'test.scratch.*' ')') $(find $Dir -type f -perm +111 '(' -name 'test_performance*' -o -name 'test.performance.*' ')')
     do
 
         echo
