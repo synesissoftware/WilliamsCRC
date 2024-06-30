@@ -142,10 +142,6 @@ endif()
 # ##########################################################
 # install
 
-install(
-    TARGETS WilliamsCRC
-)
-
 
 # ##########################################################
 # export
@@ -177,7 +173,7 @@ install(EXPORT project-targets
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${EXPORT_NAME}
 )
 
-install( FILES
+install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/cmake/${EXPORT_NAME}-config.cmake"
     "${CMAKE_CURRENT_BINARY_DIR}/cmake/${EXPORT_NAME}-config-version.cmake"
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${EXPORT_NAME}
