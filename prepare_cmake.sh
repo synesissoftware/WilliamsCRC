@@ -3,10 +3,10 @@
 ScriptPath=$0
 Dir=$(cd $(dirname "$ScriptPath"); pwd)
 Basename=$(basename "$ScriptPath")
-CMakePath=$Dir/_build
+CMakeDir=$Dir/_build
 
 
-CmakeVerboseMakefile=0
+CMakeVerboseMakefile=0
 Configuration=Release
 RunMake=0
 # STLSoftDirEnvVar=${STLSOFT}
@@ -29,7 +29,7 @@ while [[ $# -gt 0 ]]; do
             STLSoftDirGiven=$1
             ;;
         -v|--cmake-verbose-makefile)
-            CmakeVerboseMakefile=1
+            CMakeVerboseMakefile=1
             ;;
         --help)
             cat << EOF
@@ -51,7 +51,7 @@ Flags/options:
 
     -m
     --run-make
-        runs make after a successful running of Cmake
+        runs make after a successful running of CMake
 
     -s <dir>
     --stlsoft-root-dir <dir>
@@ -88,16 +88,20 @@ done
 # ##########################################################
 # main()
 
-mkdir -p $CMakePath || exit 1
+mkdir -p $CMakeDir || exit 1
 
-cd $CMakePath
+cd $CMakeDir
 
 echo "Executing CMake"
 
-if [ $CmakeVerboseMakefile -eq 0 ]; then CmakeVerboseMakefileFlag="OFF" ; else CmakeVerboseMakefileFlag="ON" ; fi
-if [ -z $STLSoftDirGiven ]; then CmakeSTLSoftVariable="" ; else CmakeSTLSoftVariable="-DSTLSOFT=$STLSoftDirGiven/" ; fi
+if [ $CMakeVerboseMakefile -eq 0 ]; then CMakeVerboseMakefileFlag="OFF" ; else CMakeVerboseMakefileFlag="ON" ; fi
+if [ -z $STLSoftDirGiven ]; then CMakeSTLSoftVariable="" ; else CMakeSTLSoftVariable="-DSTLSOFT=$STLSoftDirGiven/" ; fi
 
-cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=$CmakeVerboseMakefileFlag -DCMAKE_BUILD_TYPE=$Configuration $CmakeSTLSoftVariable .. || (cd ->/dev/null ; exit 1)
+cmake \
+  $CMakeSTLSoftVariable \
+  -DCMAKE_BUILD_TYPE=$Configuration \
+  -DCMAKE_VERBOSE_MAKEFILE:BOOL=$CMakeVerboseMakefileFlag \
+  .. || (cd ->/dev/null ; exit 1)
 
 if [ $RunMake -ne 0 ]; then
 
@@ -108,10 +112,10 @@ fi
 
 cd ->/dev/null
 
-if [ $CmakeVerboseMakefile -ne 0 ]; then
+if [ $CMakeVerboseMakefile -ne 0 ]; then
 
-    echo -e "contents of $CMakePath:"
-    ls -al $CMakePath
+    echo -e "contents of $CMakeDir:"
+    ls -al $CMakeDir
 fi
 
 
