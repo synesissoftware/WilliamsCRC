@@ -10,9 +10,11 @@ CMakePath=$Dir/_build
 # command-line handling
 
 while [[ $# -gt 0 ]]; do
-    case $1 in
-        --help)
-            cat << EOF
+
+  case $1 in
+    --help)
+
+      cat << EOF
 WilliamsCRC is a port/wrapper of Ross Williams' CRC library
 Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
 Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
@@ -33,16 +35,17 @@ Flags/options:
 
 EOF
 
-            exit 0
-            ;;
-        *)
-            >&2 echo "$ScriptPath: unrecognised argument '$1'; use --help for usage"
+      exit 0
+      ;;
+    *)
 
-            exit 1
-            ;;
-    esac
+      >&2 echo "$ScriptPath: unrecognised argument '$1'; use --help for usage"
 
-    shift
+      exit 1
+      ;;
+  esac
+
+  shift
 done
 
 
@@ -59,22 +62,22 @@ status=0
 
 if make; then
 
-    for f in $(find $Dir -type f -perm +111 '(' -name 'test_scratch*' -o -name 'test.scratch.*' ')') $(find $Dir -type f -perm +111 '(' -name 'test_performance*' -o -name 'test.performance.*' ')')
-    do
+  for f in $(find $Dir -type f -perm +111 '(' -name 'test_scratch*' -o -name 'test.scratch.*' ')') $(find $Dir -type f -perm +111 '(' -name 'test_performance*' -o -name 'test.performance.*' ')')
+  do
 
-        echo
-        echo "executing $f:"
+    echo
+    echo "executing $f:"
 
-        if ! $f; then
+    if ! $f; then
 
-            status=$?
+      status=$?
 
-            break 1
-        fi
-    done
+      break 1
+    fi
+  done
 else
 
-    status=$?
+  status=$?
 fi
 
 cd ->/dev/null
