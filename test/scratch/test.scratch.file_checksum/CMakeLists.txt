@@ -4,7 +4,9 @@ add_executable(test.scratch.file_checksum
 )
 
 target_link_libraries(test.scratch.file_checksum
-	WilliamsCRC
+	PRIVATE
+		WilliamsCRC
+		$<$<STREQUAL:${STLSOFT_INCLUDE_DIR},>:STLSoft::STLSoft>
 )
 
 target_compile_options(test.scratch.file_checksum PRIVATE

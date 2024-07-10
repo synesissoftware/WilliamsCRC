@@ -4,7 +4,8 @@ add_executable(test.scratch.versions
 )
 
 target_link_libraries(test.scratch.versions
-	WilliamsCRC
+	PRIVATE
+		WilliamsCRC
 )
 
 target_compile_options(test.scratch.versions PRIVATE
