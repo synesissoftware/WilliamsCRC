@@ -97,7 +97,11 @@ echo "Executing CMake"
 if [ $CMakeVerboseMakefile -eq 0 ]; then CMakeVerboseMakefileFlag="OFF" ; else CMakeVerboseMakefileFlag="ON" ; fi
 if [ -z $STLSoftDirGiven ]; then CMakeSTLSoftVariable="" ; else CMakeSTLSoftVariable="-DSTLSOFT=$STLSoftDirGiven/" ; fi
 
-cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=$CMakeVerboseMakefileFlag -DCMAKE_BUILD_TYPE=$Configuration $CMakeSTLSoftVariable .. || (cd ->/dev/null ; exit 1)
+cmake \
+  $CMakeSTLSoftVariable \
+  -DCMAKE_BUILD_TYPE=$Configuration \
+  -DCMAKE_VERBOSE_MAKEFILE:BOOL=$CMakeVerboseMakefileFlag \
+  .. || (cd ->/dev/null ; exit 1)
 
 if [ $RunMake -ne 0 ]; then
 
