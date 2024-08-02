@@ -5,7 +5,7 @@
 # Purpose:  Top-level CMake lists file for WilliamsCRC
 #
 # Created:  31st December 2023
-# Updated:  10th July 2024
+# Updated:  2nd August 2024
 #
 # ######################################################################## #
 
@@ -30,7 +30,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
 # project
 
 project(WilliamsCRC
-	DESCRIPTION "WilliamsCRC is a port/wrapper of Ross Williams' CRC library."
+	DESCRIPTION "WilliamsCRC is a port/wrapper of Ross Williams CRC library."
 	HOMEPAGE_URL "https://github.com/synesissoftware/WilliamsCRC"
 	LANGUAGES C CXX
 )
