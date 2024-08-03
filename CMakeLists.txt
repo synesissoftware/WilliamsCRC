@@ -5,7 +5,7 @@
 # Purpose:  Top-level CMake lists file for WilliamsCRC
 #
 # Created:  31st December 2023
-# Updated:  10th July 2024
+# Updated:  3rd August 2024
 #
 # ######################################################################## #
 
@@ -123,7 +123,7 @@ include(CTest)
 if(BUILD_TESTING)
 
 	add_subdirectory(test)
-endif()
+endif(BUILD_TESTING)
 
 
 # ##########################################################
@@ -132,8 +132,10 @@ endif()
 option(BUILD_EXAMPLES "Build examples" ON)
 if(BUILD_EXAMPLES)
 
+	message("-- enabled building of examples ...")
+
 	add_subdirectory(examples)
-endif()
+endif(BUILD_EXAMPLES)
 
 
 # ##########################################################

@@ -21,7 +21,7 @@ while [[ $# -gt 0 ]]; do
     --help)
 
       cat << EOF
-WilliamsCRC is a port/wrapper of Ross Williams' CRC library
+WilliamsCRC is a port/wrapper of Ross Williams CRC library
 Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
 Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
 Copyright (c) 1993, Ross Williams
@@ -72,13 +72,8 @@ if [ $RunMake -ne 0 ]; then
 
   cd $CMakeDir
 
-  if make; then
-
-    :
-  else
-
-    status=$?
-  fi
+  make
+  status=$?
 else
 
   if [ ! -d "$CMakeDir" ] || [ ! -f "$CMakeDir/CMakeCache.txt" ] || [ ! -d "$CMakeDir/CMakeFiles" ]; then
@@ -100,8 +95,15 @@ if [ $status -eq 0 ]; then
     echo
     echo "executing $f:"
 
-    # NOTE: we do not break on fail, because, this being a unit-testing library, some tests actually fail intentionally
-    $f
+    if $f; then
+
+      :
+    else
+
+      status=$?
+
+      break 1
+    fi
   done
 fi
 
