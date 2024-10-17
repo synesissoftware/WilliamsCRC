@@ -1,4 +1,42 @@
 
+# ######################################################################## #
+# File:     /src/CMakeLists.txt
+#
+# Purpose:  CMake lists file for WilliamsCRC core library
+#
+# Created:  ...
+# Updated:  17th October 2024
+#
+# ######################################################################## #
+
+
+if(UNIX)
+
+	add_definitions(-DUNIX)
+	add_definitions(-Dunix)
+endif(UNIX)
+
+if(WIN32)
+
+	if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+
+		message (STATUS "Compiling for 64-bit Windows")
+
+		add_definitions(-DWIN64)
+	else()
+
+		message (STATUS "Compiling for 32-bit Windows")
+
+		add_definitions(-DWIN32)
+	endif()
+endif(WIN32)
+
+if ((MSVC) AND (MSVC_VERSION GREATER_EQUAL 1914))
+
+	add_compile_options("/Zc:__cplusplus")
+endif()
+
+
 set(BINDING_SRC_DIR .)
 set(WILLIAMS_SRC_DIR ./wcrc)
 
@@ -12,52 +50,49 @@ file(GLOB WILLIAMS_SRCS
 	${WILLIAMS_SRC_DIR}/*.c
 )
 
-add_library(WilliamsCRC
+add_library(core
 	${BINDING_SRCS}
 )
-
-if(APPLE)
-
-	message("-- -- adding '/usr/local/include' to include-directories for 'src'")
-
-	include_directories("/usr/local/include")
-endif()
 
 set(WILLIAMSCRC_PUBLIC_HEADERS
 	"${CMAKE_SOURCE_DIR}/include/WilliamsCRC/WilliamsCRC.h"
 )
 
-set_target_properties(WilliamsCRC PROPERTIES
+set_target_properties(core PROPERTIES
+	OUTPUT_NAME "WilliamsCRC"
 	PUBLIC_HEADER "${WILLIAMSCRC_PUBLIC_HEADERS}"
 )
 
-target_include_directories(WilliamsCRC
+target_include_directories(core
 	PRIVATE "${WILLIAMS_SRC_DIR}"
 )
 
-target_include_directories(WilliamsCRC PUBLIC
-	$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
-	$<INSTALL_INTERFACE:include>
+target_include_directories(core
+	PUBLIC
+		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+		$<INSTALL_INTERFACE:include>
 )
 
-target_link_libraries(WilliamsCRC
+target_link_libraries(core
 	PRIVATE
 		$<$<STREQUAL:${STLSOFT_INCLUDE_DIR},>:STLSoft::STLSoft>
 )
 
-target_compile_options(WilliamsCRC PRIVATE
-	$<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>:
-		-Werror -Wall -Wextra -pedantic
-	>
-	$<$<CXX_COMPILER_ID:MSVC>:
-		/WX /W4
-	>
+target_compile_options(core
+	PRIVATE
+		$<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>:
+			-Werror -Wall -Wextra -pedantic
+		>
+		$<$<CXX_COMPILER_ID:MSVC>:
+			/WX /W4
+		>
 )
+
 
 # ##########################################################
 # install
 
-install(TARGETS WilliamsCRC
+install(TARGETS core
 	EXPORT project-targets
 	ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
