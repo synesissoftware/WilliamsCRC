@@ -87,7 +87,7 @@ fi
 
 if [ $status -eq 0 ]; then
 
-  for f in $(find $Dir -type f '(' -name 'test_unit*' -o -name 'test.unit.*' -o -name 'test_component*' -o -name 'test.component.*' ')' -exec test -x {} \; -print)
+  for f in $(find $CMakeDir -type f '(' -name 'test_unit*' -o -name 'test.unit.*' -o -name 'test_component*' -o -name 'test.component.*' ')' -exec test -x {} \; -print)
   do
 
     echo
