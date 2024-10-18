@@ -3,24 +3,24 @@
 ScriptPath=$0
 Dir=$(cd $(dirname "$ScriptPath"); pwd)
 Basename=$(basename "$ScriptPath")
-CMakeDir=$Dir/_build
+CMakeDir=${SIS_CMAKE_BUILD_DIR:-$Dir/_build}
 
 Directories=(
-    CMakeFiles
-    Testing
-    cmake
-    examples
-    projects
-    src
-    test
+  CMakeFiles
+  Testing
+  cmake
+  examples
+  projects
+  src
+  test
 )
 Files=(
-    CMakeCache.txt
-    CTestTestfile.cmake
-    DartConfiguration.tcl
-    Makefile
-    cmake_install.cmake
-    install_manifest.txt
+  CMakeCache.txt
+  CTestTestfile.cmake
+  DartConfiguration.tcl
+  Makefile
+  cmake_install.cmake
+  install_manifest.txt
 )
 
 OsIsWindows=0
@@ -34,6 +34,7 @@ case "${OsName}" in
   CYGWIN*|MINGW*|MSYS_NT*)
 
     Directories+=(
+      ARM64
       Win32
       x64
     )
