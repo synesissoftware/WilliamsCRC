@@ -1,14 +1,22 @@
 
 # directories (by name)
 
+/.git-old/
 /.vs/
 
 /_build/
 /_internal/
 
 /bin/
-/doc/
+/ipch/
 /lib/
+
+/doc/
+/dox/
+/ideas/
+/releases/
+/scratch/
+/temp/
 
 /include/b64/
 /include/shwild/
@@ -21,10 +29,6 @@
 /src/xcontract/
 /src/xcover/
 /src/xtests/
-
-Win32/
-ipch/
-x64/
 
 Debug Multithreaded DLL/
 Debug Multithreaded Dll/
@@ -53,6 +57,13 @@ Unicode Release Multithreaded DLL/
 Unicode Release Multithreaded/
 Unicode Release/
 
+vc71/
+vc8/
+vc9/
+
+Win32/
+x64/
+
 
 # directories (by pattern)
 
@@ -64,9 +75,10 @@ Unicode Release/
 .update_deps
 
 list_changes.cmd
+logging-bailout.txt
 prepare.cmd
-update_deps.cmd
 sh.exe.stackdump
+update_deps.cmd
 
 build/makefile.tmpl
 build/makefile.tools.xml
@@ -85,6 +97,7 @@ build/makefile.tools.xml
 *.chm
 *.d
 *.dll
+*.dsp
 *.dylib
 *.exe
 *.gch
@@ -120,7 +133,11 @@ build/makefile.tools.xml
 *.unsuccessfulbuild
 *.vcproj*.user
 *.vcxproj*.user
+*.xcuserstate
 *.zip
+
+RCa0*
+RCb0*
 
 *.vc71.sln
 *.vc8.sln
