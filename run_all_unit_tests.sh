@@ -74,17 +74,14 @@ if [ $RunMake -ne 0 ]; then
 
   make
   status=$?
+
+  cd ->/dev/null
 else
 
   if [ ! -d "$CMakeDir" ] || [ ! -f "$CMakeDir/CMakeCache.txt" ] || [ ! -d "$CMakeDir/CMakeFiles" ]; then
 
     >&2 echo "$ScriptPath: cannot run in '--no-make' mode without a previous successful build step"
-  else
-
-    echo "Running all test programs"
   fi
-
-  cd $CMakeDir
 fi
 
 if [ $status -eq 0 ]; then
@@ -106,8 +103,6 @@ if [ $status -eq 0 ]; then
     fi
   done
 fi
-
-cd ->/dev/null
 
 exit $status
 

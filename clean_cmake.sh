@@ -74,6 +74,7 @@ else
     status=$?
 
     cd ->/dev/null
+
     exit $status
   fi
 fi

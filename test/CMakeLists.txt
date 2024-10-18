@@ -1,14 +1,35 @@
 
-if(APPLE)
+include_directories(${CMAKE_SOURCE_DIR}/include)
 
-	message("-- -- adding '/usr/local/include' to include-directories for 'test'")
+if(UNIX)
 
-	include_directories("/usr/local/include")
+	add_definitions(-DUNIX)
+	add_definitions(-Dunix)
+endif(UNIX)
+
+if(WIN32)
+
+	if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+
+		message (STATUS "Compiling for 64-bit Windows")
+
+		add_definitions(-DWIN64)
+	else()
+
+		message (STATUS "Compiling for 32-bit Windows")
+
+		add_definitions(-DWIN32)
+	endif()
+
+	add_definitions(-DRECLS_API_FTP)
+endif(WIN32)
+
+if((MSVC) AND (MSVC_VERSION GREATER_EQUAL 1914))
+
+	add_compile_options("/Zc:__cplusplus")
+
+	add_definitions(-D_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING)
 endif()
-
-message("-- -- adding '${CMAKE_SOURCE_DIR}/include' to include-directories for 'test'")
-
-include_directories("${CMAKE_SOURCE_DIR}/include")
 
 
 add_subdirectory(scratch)

@@ -5,7 +5,7 @@
 # Purpose:  Top-level CMake lists file for WilliamsCRC
 #
 # Created:  31st December 2023
-# Updated:  2nd August 2024
+# Updated:  18th October 2024
 #
 # ######################################################################## #
 
@@ -52,90 +52,133 @@ set(PROJECT_VERSION_MINOR ${_VERSION_MINOR})
 set(PROJECT_VERSION_PATCH ${_VERSION_PATCH})
 set(PROJECT_VERSION "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}")
 
-message(NOTICE "Generating CMake build scripts for ${PROJECT_NAME} ${PROJECT_VERSION}.")
-
-
 # adhere strictly to C and C++ standards plus extensions. These are actually
 # useless since we do not compile anything; they merely state our intention.
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD 17)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS ON) # GNU extensions and POSIX standard
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
 
+if(MSVC)
+
+	if(MSVC_VERSION LESS 1930)
+
+		set(CMAKE_C_STANDARD 90)
+		set(CMAKE_CXX_STANDARD 98)
+	endif()
+endif(MSVC)
+
 
 # ##########################################################
-# install
+# dependencies, includes, options
 
-# provides install directory variables as defined by the GNU Coding Standards.
-include(GNUInstallDirs)
+# ################################################
+# includes - 1
+
+include(BuildType)
+include(LanguageFullVersion)
+include(TargetMacros)
 
 
-# ##########################################################
+# ################################################
+# dependencies and options
+
+option(BUILD_EXAMPLES "Build examples" ON)
+
+
+# ######################################
+# dependencies
+#
+# required:
+# - STLSoft
+#
+# optional:
+
+
+# ##############################
 # STLSoft
 #
 # We provide flexibility here, as in:
 # 1. if a CMake variable STLSOFT is provided then it is used; otherwise
-# 2. if an environment variable STLSOFT is provided then it then it is used; otherwise
-# 3. if the package STLSoft (via find_package()) is found then it is used; otherwise
+# 2. if an environment variable STLSOFT is provided then it then it is used;
+#    otherwise
+# 3. if the package STLSoft (via find_package()) is found then it is used;
+#    otherwise
 # 4. we abort
 
-if(NOT DEFINED STLSOFT AND NOT DEFINED ENV{STLSOFT})
+if(DEFINED STLSOFT)
+
+	message("-- STLSOFT provided as CMake variable with value '${STLSOFT}'")
+
+	set(STLSOFT_INCLUDE_DIR ${STLSOFT}/include)
+elseif(DEFINED ENV{STLSOFT})
+
+	message("-- STLSOFT provided as environment variable with value '$ENV{STLSOFT}'")
+
+	set(STLSOFT_INCLUDE_DIR $ENV{STLSOFT}/include)
+else()
 
 	set(STLSoft_REQUIRED_VERSION_ 1.11)
 
 	find_package(STLSoft ${STLSoft_REQUIRED_VERSION_} REQUIRED)
 
 	message("-- CMake package STLSoft found (version ${STLSoft_VERSION}; ${STLSoft_REQUIRED_VERSION_} requested)")
-else()
+endif()
 
-	if(DEFINED STLSOFT)
-
-		message("-- STLSOFT provided as CMake variable with value ${STLSOFT}")
-
-		set(STLSOFT_INCLUDE_DIR ${STLSOFT}/include)
-	else()
-
-		message("-- STLSOFT provided as environment variable with value $ENV{STLSOFT}")
-
-		set(STLSOFT_INCLUDE_DIR $ENV{STLSOFT}/include)
-	endif()
+if(DEFINED STLSOFT_INCLUDE_DIR)
 
 	include_directories(${STLSOFT_INCLUDE_DIR})
 endif()
 
 
-# ##########################################################
-# build
+# ################################################
+# includes - 2
 
-# load/default `CMAKE_BUILD_TYPE`
-include(BuildType)
+include(CMakePackageConfigHelpers)
+if(BUILD_TESTING)
+
+	include(CTest)
+endif(BUILD_TESTING)
+include(GNUInstallDirs)
+
+
+# ##########################################################
+# targets
+
+# ################################################
+# main library
 
 add_subdirectory(src)
 
 
-# ##########################################################
-# test
-
-include(CTest)
-
-if(BUILD_TESTING)
-
-	add_subdirectory(test)
-endif(BUILD_TESTING)
-
-
-# ##########################################################
+# ################################################
 # examples
 
-option(BUILD_EXAMPLES "Build examples" ON)
 if(BUILD_EXAMPLES)
 
 	message("-- enabled building of examples ...")
 
 	add_subdirectory(examples)
+else(BUILD_EXAMPLES)
+
+	message("-- disabled building of examples - define BUILD_EXAMPLES to enable")
 endif(BUILD_EXAMPLES)
+
+
+# ################################################
+# tests
+
+if(BUILD_TESTING)
+
+	message("-- enabled building of tests ...")
+
+	add_subdirectory(test)
+else(BUILD_TESTING)
+
+	message("-- disabled building of tests - define BUILD_TESTING to enable")
+endif(BUILD_TESTING)
 
 
 # ##########################################################
@@ -144,8 +187,6 @@ endif(BUILD_EXAMPLES)
 
 # ##########################################################
 # export
-
-include(CMakePackageConfigHelpers)
 
 set(EXPORT_NAME ${PROJECT_NAME})
 
@@ -178,6 +219,11 @@ install(FILES
 	DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${EXPORT_NAME}
 )
 
+
+# ##########################################################
+# completion
+
+message(NOTICE "Generating CMake build scripts for ${PROJECT_NAME} ${PROJECT_VERSION}, for C${CMAKE_C_STANDARD} C++${CMAKE_CXX_STANDARD}")
 
 
 # ############################## end of file ############################# #
