@@ -57,7 +57,7 @@ file(GLOB WILLIAMS_SRCS
 	${WILLIAMS_SRC_DIR}/*.c
 )
 
-add_library(WilliamsCRC
+add_library(core
 	${BINDING_SRCS}
 )
 
@@ -65,27 +65,27 @@ set(WILLIAMSCRC_PUBLIC_HEADERS
 	"${CMAKE_SOURCE_DIR}/include/WilliamsCRC/WilliamsCRC.h"
 )
 
-set_target_properties(WilliamsCRC PROPERTIES
+set_target_properties(core PROPERTIES
+	OUTPUT_NAME "WilliamsCRC"
 	PUBLIC_HEADER "${WILLIAMSCRC_PUBLIC_HEADERS}"
 )
 
-target_include_directories(WilliamsCRC
-	# OUTPUT_NAME "WilliamsCRC"
+target_include_directories(core
 	PRIVATE "${WILLIAMS_SRC_DIR}"
 )
 
-target_include_directories(WilliamsCRC
+target_include_directories(core
 	PUBLIC
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
 		$<INSTALL_INTERFACE:include>
 )
 
-target_link_libraries(WilliamsCRC
+target_link_libraries(core
 	PRIVATE
 		$<$<STREQUAL:${STLSOFT_INCLUDE_DIR},>:STLSoft::STLSoft>
 )
 
-target_compile_options(WilliamsCRC
+target_compile_options(core
 	PRIVATE
 		$<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>:
 			-Werror -Wall -Wextra -pedantic
@@ -95,10 +95,11 @@ target_compile_options(WilliamsCRC
 		>
 )
 
+
 # ##########################################################
 # install
 
-install(TARGETS WilliamsCRC
+install(TARGETS core
 	EXPORT project-targets
 	ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
