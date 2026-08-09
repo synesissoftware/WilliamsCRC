@@ -1,6 +1,11 @@
 # WilliamsCRC - CHANGES <!-- omit in toc -->
 
 
+## 2.0.6 - 9th August 2026
+
+2.0.6
+
+
 ## 2.0.6-alpha1 - 7th August 2026
 
 * Added modular GitHub Actions CI (**ci.yml** / **ci-cell.yml**) with install-smoke coverage;
