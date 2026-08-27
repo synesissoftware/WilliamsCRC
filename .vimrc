@@ -17,12 +17,12 @@ set fixeol
 set list
 set listchars=tab:->,trail:-,extends:>,precedes:<,nbsp:+
 
-" editor.detectIndentation: false — global defaults (editor.tabSize: 4, insertSpaces: true)
+" editor.detectIndentation: false — global defaults (editor.tabSize: 2, insertSpaces: false)
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set noexpandtab
 set colorcolumn=76
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
 
 " colorcolumn draws a full-column tint in Vim (not a VS Code-style 1px line).
 " Keep it subtle via the ColorColumn highlight group; reapply after colorscheme changes.
@@ -43,26 +43,26 @@ autocmd BufWritePre * %s/\s\+$//e
 augroup sis_c_cxx
   autocmd!
 
+  " [bat]
+  autocmd FileType bat,dosbatch setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=60,76
+
   " [c] / [cpp]
   autocmd FileType c,cpp setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=60,64,68,72,76
 
-  " [rust]
-  autocmd FileType rs setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=76
-
   " [cmake]
   autocmd FileType cmake setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
-
-  " [shellscript]
-  autocmd FileType sh,bash,zsh setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2 colorcolumn=60,76
-
-  " [bat]
-  autocmd FileType bat,dosbatch setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=60,76
 
   " [json] / [markdown] / [yaml] / [ruby]
   autocmd FileType json,markdown,yaml,ruby setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
   " [python]
   autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=60,76
+
+  " [rust]
+  autocmd FileType rs setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=76
+
+  " [shellscript]
+  autocmd FileType sh,bash,zsh setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2 colorcolumn=60,76
 
   " [toml]
   autocmd FileType toml setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2

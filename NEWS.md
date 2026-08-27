@@ -3,7 +3,8 @@
 
 | Date               | News Item                                                                                          |
 | ------------------ | -------------------------------------------------------------------------------------------------- |
-| 5th Aug 2026       | Release of [WilliamsCRC 2.0.6-alpha1](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.6-alpha1) |
+| 9th Aug 2026       | Release of [WilliamsCRC 2.0.6](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.6)  |
+| 7th Aug 2026       | Release of [WilliamsCRC 2.0.6-alpha1](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.6-alpha1) |
 | 27th Feb 2025      | WilliamsCRC 2.0.5 released                                                                         |
 | 23rd Oct 2024      | WilliamsCRC 2.0.4 released                                                                         |
 | 17th Oct 2024      | WilliamsCRC 2.0.3 released                                                                         |

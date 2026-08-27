@@ -1,7 +1,17 @@
 # WilliamsCRC - CHANGES <!-- omit in toc -->
 
 
-## 2.0.6-alpha1 - 5th August 2026
+## 2.0.7 - 27th August 2026
+
+* Added **examples/cpp/file_checksum** (promoted from **test.scratch.file_checksum**; smokes with no arguments by checksumming itself);
+
+
+## 2.0.6 - 9th August 2026
+
+2.0.6
+
+
+## 2.0.6-alpha1 - 7th August 2026
 
 * Added modular GitHub Actions CI (**ci.yml** / **ci-cell.yml**) with install-smoke coverage;
 * Added unit-tests **test.unit.api**, **test.unit.block_crc**, and **test.unit.file_crc** (via **xTests**);
@@ -11,7 +21,7 @@
 * Fixed **WilliamsCRC_CalculateFileHandleCrc()** NULL dereference when no byte-count out-parameter is supplied;
 * Fixed stale **b64** copy-paste in **CMakeLists.txt** / **test/CMakeLists.txt** (implicit-link suppress define; dependency comments);
 * Fixed MSVC C4996 (`fopen`) in **test.unit.file_crc** via safe-open helper;
-* Added **examples/cpp/file_checksum** (promoted from **test.scratch.file_checksum**; smokes with no arguments by checksumming itself);
+* **test.scratch.file_checksum** now smokes with no arguments (checksums self);
 * CMake helper-script enhancements (**ProjectName** from **.sis/project_name.txt**; MinGW `MakeCmd` consistency; modernised **run_all_unit_tests.sh** / **run_all_unit_tests.cmd** with `--unit-only` / `--component-only`);
 * Project boilerplate canonicalisation (**INSTALL.md** **STLSoft** clone URL; **FAQ.md** / **TODO.md** tidy);
 
