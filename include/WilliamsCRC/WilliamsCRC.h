@@ -96,7 +96,7 @@
 
 #define SYNSOFT_WILLIAMSCRC_VER_MAJOR                       2
 #define SYNSOFT_WILLIAMSCRC_VER_MINOR                       0
-#define SYNSOFT_WILLIAMSCRC_VER_PATCH                       6
+#define SYNSOFT_WILLIAMSCRC_VER_PATCH                       7
 #define SYNSOFT_WILLIAMSCRC_VER_ALPHABETA                   0xFF
 
 #define SYNSOFT_WILLIAMSCRC_VER \
