@@ -14,16 +14,16 @@ Thin port/wrapper of Ross Williams' CRC library.
 ## Table of Contents <!-- omit in toc -->
 
 - [Introduction](#introduction)
-	- [Dependencies](#dependencies)
+  - [Dependencies](#dependencies)
 - [Installation](#installation)
 - [Components](#components)
 - [Examples](#examples)
 - [Project Information](#project-information)
-	- [Where to get help](#where-to-get-help)
-	- [Contribution guidelines](#contribution-guidelines)
-	- [Dependencies](#dependencies-1)
-	- [Related projects](#related-projects)
-	- [License](#license)
+  - [Where to get help](#where-to-get-help)
+  - [Contribution guidelines](#contribution-guidelines)
+  - [Dependencies](#dependencies-1)
+  - [Related projects](#related-projects)
+  - [License](#license)
 
 
 ## Introduction
@@ -64,7 +64,11 @@ Supported CRC widths include 4, 5, 6, 7, 8, 10, 11, 12, 14, 15, 16, 24, 30, and 
 
 ## Examples
 
-Examples are not yet provided in this distribution. See the unit-tests under **test/unit/** and the scratch programs under **test/scratch/** for usage illustrations.
+| Example | Language | Purpose |
+| ------- | -------- | ------- |
+| [**file_checksum**](./examples/cpp/file_checksum/) | C++ | Calculate a CRC over a file (optional byte limit); with no arguments, checksums itself |
+
+Build with **BUILD_EXAMPLES** enabled (the default), then run via **run_all_examples.sh** or the built binary under the CMake build tree.
 
 
 ## Project Information

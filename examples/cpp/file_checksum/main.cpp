@@ -1,11 +1,11 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:    test.scratch.file_checksum.cpp
+ * File:    examples/cpp/file_checksum/main.cpp
  *
- * Purpose: Scratch program: CRC of a file (path + optional byte limit).
+ * Purpose: Example program: CRC of a file (path + optional byte limit).
  *          With no arguments, smokes against the executable path itself.
  *
  * Created: ...
- * Updated: 5th August 2026
+ * Updated: 6th August 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -142,4 +142,3 @@ int main(int argc, char* argv[])
 
 
 /* ///////////////////////////// end of file //////////////////////////// */
-

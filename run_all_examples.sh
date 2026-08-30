@@ -14,6 +14,24 @@ RunMake=1
 
 
 # ##########################################################
+# colours
+
+if command -v tput > /dev/null; then
+
+  RbEnvClr_Blue=${FG_BLUE:-$(tput setaf 4)}
+  RbEnvClr_Red=${FG_BLUE:-$(tput setaf 1)}
+  RbEnvClr_Bold=${FD_BOLD:-$(tput bold)}
+  RbEnvClr_None=${FD_NONE:-$(tput sgr0)}
+else
+
+  RbEnvClr_Blue=
+  RbEnvClr_Red=
+  RbEnvClr_Bold=
+  RbEnvClr_None=
+fi
+
+
+# ##########################################################
 # command-line handling
 
 while [[ $# -gt 0 ]]; do
@@ -31,7 +49,7 @@ while [[ $# -gt 0 ]]; do
 
       [ -f "$Dir/.sis/script_info_lines.txt" ] && cat "$Dir/.sis/script_info_lines.txt"
       cat << EOF
-Runs all example programs
+Runs all (matching) example programs
 
 $ScriptPath [ ... flags/options ... ]
 
@@ -114,13 +132,13 @@ if [ $status -eq 0 ]; then
 
       if [ $ListOnly -ne 0 ]; then
 
-        echo "would execute $f:"
+        echo "would execute $RbEnvClr_Blue$RbEnvClr_Bold$f$RbEnvClr_None:"
 
         continue
       fi
 
       echo
-      echo "executing $f:"
+      echo "executing $RbEnvClr_Blue$RbEnvClr_Bold$f$RbEnvClr_None:"
 
       $f
     done

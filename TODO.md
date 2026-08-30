@@ -11,7 +11,7 @@
 ## Functional improvements
 
 * [x] ~~~Add automated unit/component tests (via **xTests**)~~~ ✅;
-* [ ] Add example programs under **examples/**;
+* [x] ~~~Add example programs under **examples/**~~~ ✅;
 
 
 ## Performance improvements
