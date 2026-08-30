@@ -1,7 +1,7 @@
-# WilliamsCRC - CHANGES <!-- omit in toc -->
+# WilliamsCRC - Changes <!-- omit in toc -->
 
 
-## 2.0.7 - 27th August 2026
+## 2.0.7 - 31st August 2026
 
 * Added **examples/cpp/file_checksum** (promoted from **test.scratch.file_checksum**; smokes with no arguments by checksumming itself);
 
