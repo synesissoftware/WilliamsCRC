@@ -1,6 +1,12 @@
 # WilliamsCRC - Changes <!-- omit in toc -->
 
 
+## Unreleased
+
+* Applied **misc-dev-scripts** **0.6.0** editor/Git/`.sis` drop-in templates on **boilerplate**;
+* Restored historical **.gitignore** patterns as a sorted union with **misc-dev-scripts** gold section layout;
+
+
 ## 2.0.7 - 31st August 2026
 
 * Added **examples/cpp/file_checksum** (promoted from **test.scratch.file_checksum**; smokes with no arguments by checksumming itself);
