@@ -1,19 +1,20 @@
 # WilliamsCRC - News <!-- omit in toc -->
 
 
-| Date               | News Item                                                                                          |
-| ------------------ | -------------------------------------------------------------------------------------------------- |
-| 31st Aug 2026      | Release of [WilliamsCRC 2.0.7](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.7)  |
-| 9th Aug 2026       | Release of [WilliamsCRC 2.0.6](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.6)  |
-| 7th Aug 2026       | Release of [WilliamsCRC 2.0.6-alpha1](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.6-alpha1) |
-| 27th Feb 2025      | WilliamsCRC 2.0.5 released                                                                         |
-| 23rd Oct 2024      | WilliamsCRC 2.0.4 released                                                                         |
-| 17th Oct 2024      | WilliamsCRC 2.0.3 released                                                                         |
-| 10th Jul 2024      | WilliamsCRC 2.0.2 released                                                                         |
-| 30th Jun 2024      | WilliamsCRC 2.0.1 released                                                                         |
-| 9th Jan 2024       | WilliamsCRC 2.0.0 released                                                                         |
-| 31st Dec 2023      | WilliamsCRC 1.2.4-beta1 released                                                                   |
-| 7th Jan 2021       | WilliamsCRC 1.2.3 released                                                                         |
+| Date                  | News Item                        | Details |
+| --------------------- | ------------------------------- | ------- |
+| 9th October 2026      | [WilliamsCRC 2.0.8-beta1 released](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.8-beta1) | SisClr helpers, C++ version reporter, and boilerplate updates |
+| 31st August 2026      | [WilliamsCRC 2.0.7 released](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.7) | Promoted the **file_checksum** example |
+| 9th August 2026       | [WilliamsCRC 2.0.6 released](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.6) | Unit-test and packaging improvements |
+| 7th August 2026       | [WilliamsCRC 2.0.6-alpha1 released](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.6-alpha1) | Initial modernisation and computed version macros |
+| 27th February 2025    | WilliamsCRC 2.0.5 released | GCC and CMake compatibility improvements |
+| 23rd October 2024     | WilliamsCRC 2.0.4 released | CMake script improvements |
+| 17th October 2024     | WilliamsCRC 2.0.3 released | CMake packaging finalisation |
+| 10th July 2024        | WilliamsCRC 2.0.2 released | CMake finalisation |
+| 30th June 2024        | WilliamsCRC 2.0.1 released | Maintenance release |
+| 9th January 2024      | WilliamsCRC 2.0.0 released | CMake-based build and packaging |
+| 31st December 2023    | WilliamsCRC 1.2.4-beta1 released | FOSS modernisation begun |
+| 7th January 2021      | WilliamsCRC 1.2.3 released | GCC compatibility |
 
 
 <!-- ########################### end of file ########################### -->
