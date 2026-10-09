@@ -1,10 +1,13 @@
 # WilliamsCRC - Changes <!-- omit in toc -->
 
 
-## Unreleased
+## 2.0.8-beta1 - 9th October 2026
 
 * Applied **misc-dev-scripts** **0.6.0** editor/Git/`.sis` drop-in templates on **boilerplate**;
 * Restored historical **.gitignore** patterns as a sorted union with **misc-dev-scripts** gold section layout;
+* Added native Windows helper runners and canonicalised the CMake helper scripts;
+* Added the **test/scratch/versions** C++ version reporter with the **test.scratch.versions** target;
+* Replaced the legacy C scratch version reporter with the canonical C++ version reporter;
 
 
 ## 2.0.7 - 31st August 2026
