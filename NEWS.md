@@ -3,6 +3,7 @@
 
 | Date                  | News Item                        | Details |
 | --------------------- | ------------------------------- | ------- |
+| 14th October 2026      | [WilliamsCRC 2.0.8 released](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.8) | Tip helpers; RelSt promote; Phase **4c**; CI hygiene |
 | 9th October 2026      | [WilliamsCRC 2.0.8-beta1 released](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.8-beta1) | SisClr helpers, C++ version reporter, and boilerplate updates |
 | 31st August 2026      | [WilliamsCRC 2.0.7 released](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.7) | Promoted the **file_checksum** example |
 | 9th August 2026       | [WilliamsCRC 2.0.6 released](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.6) | Unit-test and packaging improvements |
