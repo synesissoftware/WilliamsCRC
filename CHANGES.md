@@ -1,6 +1,14 @@
 # WilliamsCRC - Changes <!-- omit in toc -->
 
 
+## 2.0.8 - 14th October 2026
+
+* Synced tip **cmake-helpers** runners;
+* Migrated `SYNSOFT_WILLIAMSCRC_VER_ALPHABETA` to `SYNSOFT_WILLIAMSCRC_VER_RELSTATUS` (alias retained) and promoted to release status `0xFF`;
+* Phase **4c** polish: `PROGRAM_NAME` **test.scratch.versions**;
+* CI hygiene: **install-sis-deps**, execute-bit restore, Windows **.cmd** dogfood;
+
+
 ## 2.0.8-beta1 - 9th October 2026
 
 * Applied **misc-dev-scripts** **0.6.0** editor/Git/`.sis` drop-in templates on **boilerplate**;
