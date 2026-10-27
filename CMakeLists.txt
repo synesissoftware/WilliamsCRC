@@ -5,7 +5,7 @@
 # Purpose:  Top-level CMake lists file for WilliamsCRC
 #
 # Created:  31st December 2023
-# Updated:  4th August 2026
+# Updated:  27th October 2026
 #
 # ######################################################################## #
 
@@ -152,7 +152,14 @@ if(NOT (NO_SHWILD))
 
 			message("-- CMake package shwild found (version ${shwild_VERSION})")
 
-			add_compile_definitions(XTESTS_HAS_SHWILD)
+			add_compile_definitions(
+				HAS_shwild
+				HAS_SHWILD
+			)
+
+			add_compile_definitions(SYNSOFT_WILLIAMSCRC_HAS_SHWILD)
+			add_compile_definitions(WILLIAMSCRC_HAS_SHWILD)
+			add_compile_definitions(XTESTS_HAS_SHWILD) # Legacy form, and should be removed later
 		endif(shwild_FOUND)
 	endif(BUILD_TESTING)
 endif()
@@ -163,11 +170,16 @@ endif()
 
 if(BUILD_TESTING)
 
-	set(xTests_REQUIRED_VERSION_ 0.26)
+	set(xTests_REQUIRED_VERSION_ 0.28)
 
 	find_package(xTests ${xTests_REQUIRED_VERSION_} REQUIRED)
 
 	message("-- CMake package xTests found (version ${xTests_VERSION}; ${xTests_REQUIRED_VERSION_} requested)")
+
+	add_compile_definitions(
+		HAS_xTests
+		HAS_XTESTS
+	)
 endif(BUILD_TESTING)
 
 

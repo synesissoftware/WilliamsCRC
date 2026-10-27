@@ -1,6 +1,11 @@
 # WilliamsCRC - Changes <!-- omit in toc -->
 
 
+## 2.0.9 - 27th October 2026
+
+* Defined `HAS_<Pkg>` and `HAS_<PKG>` when a Synesis package other than **STLSoft** is detected;
+
+
 ## 2.0.8 - 14th October 2026
 
 * Synced tip **cmake-helpers** runners;
