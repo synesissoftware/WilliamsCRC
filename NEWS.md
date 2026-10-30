@@ -3,7 +3,7 @@
 
 | Date                  | News Item                        | Details |
 | --------------------- | ------------------------------- | ------- |
-| 31st October 2026      | Release of [WilliamsCRC 2.0.10](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.10) | `File:` labels use the project-relative path |
+| 31st October 2026      | Release of [WilliamsCRC 2.0.10](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.10) | `File:` labels use the project-relative path; **Check test names** |
 | 27th October 2026      | Release of [WilliamsCRC 2.0.9](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.9) | `HAS_<Pkg>` / `HAS_<PKG>` for detected Synesis packages |
 | 14th October 2026      | [WilliamsCRC 2.0.8 released](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.8) | Tip helpers; RelSt promote; Phase **4c**; CI hygiene |
 | 9th October 2026      | [WilliamsCRC 2.0.8-beta1 released](https://github.com/synesissoftware/WilliamsCRC/releases/tag/2.0.8-beta1) | SisClr helpers, C++ version reporter, and boilerplate updates |
