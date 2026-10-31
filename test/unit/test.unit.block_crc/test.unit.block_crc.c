@@ -1,10 +1,10 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:    test.unit.block_crc.c
+ * File:    test/unit/test.unit.block_crc/test.unit.block_crc.c
  *
  * Purpose: Unit-tests for WilliamsCRC block / streaming CRC calculation.
  *
  * Created: 5th August 2026
- * Updated: 5th August 2026
+ * Updated: 30th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 

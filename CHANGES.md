@@ -1,6 +1,14 @@
 # WilliamsCRC - Changes <!-- omit in toc -->
 
 
+## 2.0.10 - 1st November 2026
+
+* testing:
+  * `File:` labels under **test** name the project-relative path;
+* build:
+  * the **Check test names** job runs **STLSoft** **check_unit_test_names.rb** over **examples** and **test**;
+
+
 ## 2.0.9 - 27th October 2026
 
 * Defined `HAS_<Pkg>` and `HAS_<PKG>` when a Synesis package other than **STLSoft** is detected;
