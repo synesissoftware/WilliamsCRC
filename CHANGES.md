@@ -1,6 +1,12 @@
 # WilliamsCRC - Changes <!-- omit in toc -->
 
 
+## 2.0.11 - 2nd November 2026
+
+* build:
+  * **STLSoft** minimum is **1.11.5**;
+  * **xTests** minimum is **0.28.2**;
+
 ## 2.0.10 - 1st November 2026
 
 * testing:
