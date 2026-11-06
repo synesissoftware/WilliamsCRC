@@ -1,6 +1,12 @@
 # WilliamsCRC - Changes <!-- omit in toc -->
 
 
+## 2.0.12 - 6th November 2026
+
+* build:
+  * CI installs **woad** before **xTests**, which **xTests** 0.29 requires;
+
+
 ## 2.0.11 - 2nd November 2026
 
 * build:
